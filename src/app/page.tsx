@@ -8,7 +8,7 @@ export default function Home() {
         className="w-full min-h-screen flex flex-col justify-center items-center "
       >
         <div className="relative flex place-items-center  justify-between self-center items-center  flex-col sm:flex-row w-full md:w-5/6 xl:w-2/3 px-4 sm:px-0 h-full">
-          <div className="w-2/5 text-center sm:text-left  py-12 sm:px-8 md:px-10">
+          <div className="w-2/5 text-center sm:text-left  sm:py-4 py-12 sm:px-8 md:px-10">
             <Image
               className="relative rounded-full"
               src="/portfolio/photo.jpg"
@@ -18,7 +18,7 @@ export default function Home() {
               priority
             />
           </div>
-          <div className="place-items-center p-5 w-3/5 ">
+          <div className="place-items-center p-5 w-3/5  ">
             <Image
               className="relative overflow-hidden "
               src="/portfolio/charmae-name.png"
@@ -168,7 +168,7 @@ export default function Home() {
 
       <div
         id="skillset"
-        className="w-full min-h-screen flex flex-col justify-center items-center py-5"
+        className="w-full min-h-screen flex flex-col justify-center items-center my-5"
       >
         <div className="self-center text-center w-full sm:w-2/3 xl:w-1/2  sm:px-0">
           <h2 className="font-bold tracking-wider text-gray-800 text-3xl mb-4">
@@ -176,7 +176,7 @@ export default function Home() {
           </h2>
         </div>
 
-        <div className="relative place-items-center w-3/4  justify-between grid sm:grid-cols-3 sm:gap-3">
+        <div className="relative place-items-center w-3/4  justify-between grid sm:grid-cols-3 sm:gap-3 grid-cols-2 gap-2">
           <div className="w-full sm:w-full flex  hover:shadow-lg p-5  ">
             <div className="w-1/4 xl:w-1/4">
               <img
@@ -311,45 +311,49 @@ export default function Home() {
           </h2>
         </div>
 
-        <div className="relative place-items-center w-3/4  justify-between grid sm:grid-cols-5 sm:gap-5">
-          <div className="w-full place-items-center flex-row hover:shadow-lg p-5">
+        <div className=" place-items-center w-3/4  justify-between grid sm:grid-cols-5 sm:gap-5 grid-cols-2 gap-2 ">
+        <div className="w-full sm:w-full flex-row hover:shadow-lg p-5 place-items-center ">
             <a
               href="https://www.credly.com/badges/ef43cbcc-f032-43d0-b4fb-05809475ad41/public_url"
               target="_blank"
             >
-              <div className="w-full place-items-center ">
-                <img
+              <div className="w-full">
+                <Image
                   src="/portfolio/certificate/aws-practitioner-cert.png"
                   alt="AWS Certified Cloud Practitioner"
-                  className="w-24 xs:w-10 block sm:mx-auto  text-align-center "
+                  width={115}
+                  height={24}
+                  className="block mx-auto"
+                  priority
                 />
               </div>
 
               <div className="w-full place-items-center pt-2 ">
                 <p className="font-light text-gray-500 text-xs text-center">
-                  {" "}
-                  AWS Certified Cloud Practitioner
+                    AWS Certified Cloud Practitioner
                 </p>
               </div>
             </a>
           </div>
 
-          <div className="w-full sm:w-full flex-row hover:shadow-lg p-5">
+          <div className="w-full sm:w-full flex-row hover:shadow-lg p-5 place-items-center ">
             <a
               href="https://www.credly.com/badges/0d6ff17f-53d7-4c87-a4f5-12d79b83e888/public_url"
               target="_blank"
             >
               <div className="w-full">
-                <img
+                <Image
                   src="/portfolio/certificate/java-cert.png"
                   alt="Oracle Certified Java 8 Programmer"
-                  className="w-24 block sm:mx-auto"
+                  className="block mx-auto"
+                  width={115}
+                  height={24}
+                  priority
                 />
               </div>
 
               <div className="w-full place-items-center pt-2 ">
                 <p className="font-light text-gray-500 text-xs text-center">
-                  {" "}
                   Oracle Certified Java 8 Programmer
                 </p>
               </div>
@@ -362,10 +366,13 @@ export default function Home() {
               target="_blank"
             >
               <div className="w-full">
-                <img
+                <Image
                   src="/portfolio/certificate/sf-ai-cert.png"
                   alt="Salesforce Certified AI Associate"
-                  className="w-24 block sm:mx-auto"
+                  className="block mx-auto"
+                  width={115}
+                  height={24}
+                  priority
                 />
               </div>
 
@@ -383,16 +390,18 @@ export default function Home() {
               target="_blank"
             >
               <div className="w-full">
-                <img
+                <Image
                   src="/portfolio/certificate/mule-ai-cert.png"
                   alt="MuleSoft Certified Associate Integration"
-                  className="w-24 block sm:mx-auto"
+                  className="block mx-auto"
+                  width={115}
+                  height={24}
+                  priority
                 />
               </div>
 
               <div className="w-full place-items-center pt-2 ">
                 <p className="font-light text-gray-500 text-xs text-center">
-                  {" "}
                   MuleSoft Certified Associate Integration
                 </p>
               </div>
@@ -405,16 +414,18 @@ export default function Home() {
               target="_blank"
             >
               <div className="w-full">
-                <img
+                <Image
                   src="/portfolio/certificate/mule-dev-cert.png"
                   alt="MuleSoft Certified Developer"
-                  className="w-24 block sm:mx-auto"
+                  className="block mx-auto"
+                  width={115}
+                  height={24}
+                  priority
                 />
               </div>
 
               <div className="w-full place-items-center pt-2 ">
                 <p className="font-light text-gray-500 text-xs text-center">
-                  {" "}
                   MuleSoft Certified Developer
                 </p>
               </div>
