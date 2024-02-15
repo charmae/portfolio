@@ -151,6 +151,28 @@ export default function Home() {
                       </svg>
                     </a>
                   </li>
+                  <li>
+                    <a
+                      className="text-muted inline-flex items-center rounded-lg p-2.5 text-sm hover:bg-gray-100 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-700"
+                      aria-label="Email"
+                      href="mailto:charmae@gcharmae.com"
+                      target="_blank"
+                    >
+                      <svg
+                        className="h-5 w-5"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                      >
+                        <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                      </svg>
+                    </a>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -431,7 +453,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-
     </main>
   );
 }
