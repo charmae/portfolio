@@ -5,10 +5,10 @@ export default function Home() {
     <main className="flex min-h-screen flex-col items-center   ">
       <div
         id="about"
-        className="w-full min-h-screen flex flex-col justify-center items-center "
+        className="w-full min-h-screen flex flex-col justify-center items-center bg-white"
       >
-        <div className="relative flex place-items-center  justify-between self-center items-center  flex-col sm:flex-row w-full md:w-5/6 xl:w-2/3 px-4 sm:px-0 h-full">
-          <div className="w-2/5 text-center sm:text-left  sm:py-4 py-12 sm:px-8 md:px-10">
+        <div className="relative flex place-items-center  justify-between self-center items-center  flex-col sm:flex-row w-full md:w-5/6 xl:w-2/3 px-4  sm:px-0 h-full">
+          <div className="w-2/5 text-center sm:text-left  sm:py-4  sm:px-8 md:px-10">
             <Image
               className="relative rounded-full"
               src="/portfolio/photo.jpg"
@@ -156,7 +156,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="flex flex-row w-full justify-center sm:pt-40 ">
+        <div className="flex flex-row w-full justify-center sm:pt-40 invisible sm:visible">
           <a
             className="px-10 py-2 text-gray-200 bg-gray-600 rounded-full shadow-md text-lg hover:bg-gray-800 hover:border-red"
             href="#skillset"
@@ -168,9 +168,9 @@ export default function Home() {
 
       <div
         id="skillset"
-        className="w-full min-h-screen flex flex-col justify-center items-center my-5"
+        className="w-full min-h-screen flex flex-col justify-center items-center py-5 bg-slate-50 "
       >
-        <div className="self-center text-center w-full sm:w-2/3 xl:w-1/2  sm:px-0">
+        <div className="self-center text-center w-full sm:w-2/3 xl:w-1/2  sm:px-0 sm:pt-0">
           <h2 className="font-bold tracking-wider text-gray-800 text-3xl mb-4">
             Skillset
           </h2>
@@ -186,7 +186,7 @@ export default function Home() {
               />
             </div>
             <div className="w-2/3 xl:w-3/4 px-5">
-              <h3 className="tracking-wide  font-bold text-2xl  mb-0 w-4/5">
+              <h3 className="tracking-wide  font-bold text-xl mb-0 w-4/5">
                 Java
               </h3>
 
@@ -205,9 +205,7 @@ export default function Home() {
               />
             </div>
             <div className="w-2/3 xl:w-3/4 px-5 ">
-              <h3 className="tracking-wide  font-bold text-2xl  mb-0">
-                Spring
-              </h3>
+              <h3 className="tracking-wide  font-bold text-xl  mb-0">Spring</h3>
               <div className="font-light text-gray-500 text-lg">
                 <p>Advanced</p>
               </div>
@@ -223,7 +221,7 @@ export default function Home() {
               />
             </div>
             <div className="w-2/3 xl:w-3/4 px-5">
-              <h3 className="tracking-wide  font-bold text-2xl  mb-0">
+              <h3 className="tracking-wide  font-bold text-xl  mb-0">
                 MuleSoft
               </h3>
               <div className="font-light text-gray-500 text-lg">
@@ -241,7 +239,7 @@ export default function Home() {
               />
             </div>
             <div className="w-2/3 xl:w-3/4 px-5">
-              <h3 className="tracking-wide  font-bold text-2xl  mb-0">
+              <h3 className="tracking-wide  font-bold text-xl  mb-0">
                 JavaScript
               </h3>
               <div className="font-light text-gray-500 text-lg">
@@ -259,7 +257,7 @@ export default function Home() {
               />
             </div>
             <div className="w-2/3 xl:w-3/4 px-5">
-              <h3 className="tracking-wide  font-bold text-2xl  mb-0">
+              <h3 className="tracking-wide  font-bold text-xl  mb-0">
                 TypeScript
               </h3>
               <div className="font-light text-gray-500 text-lg">
@@ -277,8 +275,8 @@ export default function Home() {
               />
             </div>
             <div className="w-2/3 xl:w-3/4 px-5">
-              <h3 className="tracking-wide  font-bold text-2xl  mb-0">
-                HL7 V2 & FHIR
+              <h3 className="tracking-wide  font-bold text-xl  mb-0">
+                HL7 V2/FHIR
               </h3>
               <div className="font-light text-gray-500 text-lg">
                 <p>Intermediate</p>
@@ -295,7 +293,7 @@ export default function Home() {
               />
             </div>
             <div className="w-2/3 xl:w-3/4 px-5">
-              <h3 className="tracking-wide  font-bold text-2xl  mb-0">
+              <h3 className="tracking-wide  font-bold text-xl  mb-0">
                 Angular
               </h3>
               <div className="font-light text-gray-500 text-lg">
@@ -312,7 +310,7 @@ export default function Home() {
         </div>
 
         <div className=" place-items-center w-3/4  justify-between grid sm:grid-cols-5 sm:gap-5 grid-cols-2 gap-2 ">
-        <div className="w-full sm:w-full flex-row hover:shadow-lg p-5 place-items-center ">
+          <div className="w-full sm:w-full flex-row hover:shadow-lg p-5 place-items-center ">
             <a
               href="https://www.credly.com/badges/ef43cbcc-f032-43d0-b4fb-05809475ad41/public_url"
               target="_blank"
@@ -330,7 +328,7 @@ export default function Home() {
 
               <div className="w-full place-items-center pt-2 ">
                 <p className="font-light text-gray-500 text-xs text-center">
-                    AWS Certified Cloud Practitioner
+                  AWS Certified Cloud Practitioner
                 </p>
               </div>
             </a>
@@ -433,6 +431,7 @@ export default function Home() {
           </div>
         </div>
       </div>
+
     </main>
   );
 }
