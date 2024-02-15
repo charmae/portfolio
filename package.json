@@ -1,6 +1,7 @@
 {
   "name": "charmae",
   "version": "0.1.0",
+  "homepage": "https://gcharmae.com",
   "private": true,
   "scripts": {
     "dev": "next dev",
