@@ -9,7 +9,10 @@ import CertificateSection from "./certificates";
 
 export default function SkillSection() {
   return (
-    <div id="skillset"  className="w-full min-h-screen flex flex-col justify-center items-center py-10  bg-slate-50 " >
+    <div
+      id="skillset"
+      className="w-full min-h-screen flex flex-col justify-center items-center py-10  bg-slate-50 "
+    >
       <div className="self-center text-center w-full sm:w-2/3 xl:w-1/2  sm:px-0 sm:pt-0">
         <h2 className="font-bold tracking-wider text-gray-800 text-3xl mb-4">
           Skillset

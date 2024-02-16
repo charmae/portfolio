@@ -42,8 +42,7 @@ export default function About() {
                       href={socialMedia.href}
                       target="_blank"
                     >
-                     
-                    {Parser(socialMedia.svgPath)}
+                      {Parser(socialMedia.svgPath)}
                     </a>
                   </li>
                 ))}
@@ -51,16 +50,15 @@ export default function About() {
             </div>
           </div>
         </div>
-        
       </div>
       <div className="flex flex-row w-full justify-center sm:pt-40 invisible sm:visible">
-          <a
-            className="px-10 py-2 text-gray-200 bg-gray-600 rounded-full shadow-md text-lg hover:bg-gray-800 hover:border-red"
-            href="#skillset"
-          >
-            See Skillset
-          </a>
-        </div>
+        <a
+          className="px-10 py-2 text-gray-200 bg-gray-600 rounded-full shadow-md text-lg hover:bg-gray-800 hover:border-red"
+          href="#skillset"
+        >
+          See Skillset
+        </a>
+      </div>
     </div>
   );
 }
