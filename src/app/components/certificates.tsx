@@ -5,7 +5,7 @@ import { CertType, CERT_LIST as certList } from "@/constants/constant";
 
 export default function CertificateSection() {
   return (
-    <div  className="relative flex flex-col justify-center items-center   "
+    <div  className="relative flex flex-col justify-center items-center  bg-orange-50 "
     >
       <div className="relative text-center w-full px-1 pt-5 sm:px-0">
         <h2 className="relative w-full font-bold  text-gray-800 text-2xl mb-4  ">
@@ -32,7 +32,7 @@ export default function CertificateSection() {
               </div>
 
               <div className="relative w-full place-items-center pt-2 ">
-                <p className="font-light text-gray-500 text-xs text-center">
+                <p className="font-light text-gunmetal text-xs text-center">
                   {cert.name}
                 </p>
               </div>

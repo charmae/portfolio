@@ -16,7 +16,7 @@ export default function About() {
             src={aboutMe.avatarIcon}
             alt="photo Logo"
             width={350}
-            height={350}
+            height={30}
             priority
             className="mx-auto rounded-full"
           />
@@ -59,9 +59,8 @@ export default function About() {
       </div>
       <div className="sm:flex sm:flex-row sm:w-full justify-center sm:pt-20 invisible sm:visible">
         <a
-          className="px-10 py-2 my-10 text-gray-200 bg-gray-600 rounded-full shadow-md text-lg hover:bg-gray-800 hover:border-red"
-          href="#skillset"
-        >
+          className="px-10 py-2 my-10 text-white bg-gray rounded-full shadow-md text-lg hover:bg-gray-800 hover:border-red"
+          href="#skillset" >
           See Skill Set
         </a>
       </div>

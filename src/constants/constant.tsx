@@ -1,16 +1,36 @@
-import React from "react";
-
 export type CertType = {
   name: string;
   href: string;
   icon: string;
 };
 
-export type SkillItem = {
+export type SkillItemType = {
   name: string;
   icon: string;
   proficiency: string;
 };
+
+export type ProjectType = {
+  id: string;
+  name: string;
+  description: string;
+  url: string;
+  repoUrl: string;
+  features: string[];
+  techStack: TechStackType[];
+  images: ImageType[];
+};
+
+export type TechStackType = {
+  name: string;
+  description: string;
+  url: string;
+}
+
+export type ImageType = {
+  id: string;
+  imageURL: string;
+}
 
 export type SocialMediaType = {
   label: string;
@@ -18,7 +38,35 @@ export type SocialMediaType = {
   href: string;
 };
 
-export const SKILL_ITEMS: SkillItem[] = [
+export const PROJECT_ITEMS: ProjectType[] = [
+  {
+    id: "project-01",
+    name: "Portfolio",
+    url: "https://gcharmae.com",
+    repoUrl: "https://github.com/charmae/portfolio",
+    description:
+      "A simple and clean portfolio built with React.js and Next.js. Showcase your skills, projects, and experience in a responsive and user-friendly interface.",
+    features: ["Responsive"],
+    techStack: [{
+      name:"ReactJs",
+      description: "",
+      url: "https://react.dev/"
+    },
+    {
+      name:"NextJs",
+      description: "",
+      url: "https://nextjs.org/"
+    }],
+      images: [
+      {
+        id: "full-screenshot",
+        imageURL: "/portfolio/project/portfolio-img.png",
+      },
+    ],
+  },
+];
+
+export const SKILL_ITEMS: SkillItemType[] = [
   {
     name: "Java",
     proficiency: "Advanced",
