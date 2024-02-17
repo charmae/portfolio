@@ -21,9 +21,12 @@ export default function ProjectSection() {
           </h2>
         </div>
 
-        <div className=" relative place-items-center w-full sm:w-3/4 w-full py-5  items-center ">
+        <div className=" relative place-items-center w-full sm:w-3/4 py-5  items-center ">
           {projects.map((project: ProjectType) => (
-            <div className="w-full flex flex-col-reverse sm:flex-row  p-2 sm:p-1 " key={project.id}>
+            <div
+              className="w-full flex flex-col-reverse sm:flex-row  p-2 sm:p-1 "
+              key={project.id}
+            >
               <div className="relative sm:w-1/2 sm:m-10 m-5 w-full   ">
                 <h3 className="tracking-wide  font-bold sm:text-xl text-lg   mb-0">
                   {project.name}
@@ -57,7 +60,6 @@ export default function ProjectSection() {
                       >
                         {tech.name}
                       </a>
-                      &nbsp;
                     </p>
                   ))}
                 </div>
@@ -79,6 +81,7 @@ export default function ProjectSection() {
             </div>
           ))}
         </div>
+        <p className="m-10 text-gray font-light text-xs text-center ">Get ready for an exciting influx of new projects coming soon!</p>
       </div>
     </>
   );
