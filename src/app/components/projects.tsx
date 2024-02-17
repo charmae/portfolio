@@ -21,14 +21,14 @@ export default function ProjectSection() {
           </h2>
         </div>
 
-        <div className=" relative place-items-center w-full sm:w-3/4 grid py-5  items-center  grid-cols-1 gap-0">
+        <div className=" relative place-items-center w-full sm:w-3/4 w-full py-5  items-center ">
           {projects.map((project: ProjectType) => (
-            <div className="w-full flex  p-2 sm:p-1 " key={project.id}>
-              <div className="relative w-1/2 m-10  ">
+            <div className="w-full flex flex-col-reverse sm:flex-row  p-2 sm:p-1 " key={project.id}>
+              <div className="relative sm:w-1/2 sm:m-10 m-5 w-full   ">
                 <h3 className="tracking-wide  font-bold sm:text-xl text-lg   mb-0">
                   {project.name}
                 </h3>
-                <div className="relative font-light text-gray-500 sm:text-sm mt-2">
+                <div className="relative font-light text-gray-500 sm:text-sm mt-2 ">
                   <p>{project.description}</p>
                 </div>
                 <div className="relative font-light text-gray-500 sm:text-sm mt-2 ">
@@ -64,7 +64,7 @@ export default function ProjectSection() {
 
                 <hr className="w-full my-12 h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-red-500 to-transparent opacity-50 dark:opacity-100" />
               </div>
-              <div className="w-1/2  ">
+              <div className="relative sm:w-1/2 w-full  ">
                 {project.images.map((projectImg: ImageType) => (
                   <Image
                     key={projectImg.id as string}

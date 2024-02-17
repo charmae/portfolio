@@ -11,11 +11,11 @@ export default function SkillSection() {
   return (
     <div
       id="skillset"
-      className="relative w-full sm:min-h-screen  flex flex-col justify-center items-center py-10 bg-lightGray "
+      className="relative w-full sm:min-h-screen  flex flex-col justify-center items-center py-10 bg-lightGray  "
     >
       <div className="relative self-center text-center w-full sm:w-2/3 xl:w-1/2  sm:px-0 sm:pt-0">
         <h2 className="font-bold tracking-wider text-gunmetal text-3xl mb-4">
-          Skill set
+          Skills
         </h2>
       </div>
 
@@ -46,6 +46,13 @@ export default function SkillSection() {
         ))}
       </div>
       <CertificateSection/>
+      <div className="sm:flex sm:flex-row sm:w-full justify-center sm:pt-20 invisible sm:visible">
+        <a
+          className="px-10 py-2 my-10 text-white bg-gray rounded-full shadow-md text-lg hover:bg-gray-800 hover:border-red"
+          href="#projectSection" >
+          See Projects
+        </a>
+      </div>
     </div>
   );
 }
