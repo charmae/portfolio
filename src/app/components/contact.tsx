@@ -1,9 +1,49 @@
 "use client";
 import Image from "next/image";
+import { useRef, useEffect, useState } from "react";
+import emailjs from "@emailjs/browser";
+
+
+const EMAILJS_KEY = process.env.EMAILJS_KEY as string; 
+const EMAILJS_SERVICEID = process.env.EMAILJS_SERVICEID as string;
+const EMAILJS_TEMPLATEID = process.env.EMAILJS_TEMPLATEID as string;
 
 
 export default function ContactSection() {
+    console.log("Contact section")
+    console.log("service Id:" + EMAILJS_SERVICEID);
+
+    const emailRef = useRef<HTMLInputElement >(null!);
+    const nameRef = useRef<HTMLInputElement>(null!);
+    const msgRef = useRef<HTMLTextAreaElement>(null!);
+
+    const [loading, setLoading] = useState(false);
+
+    useEffect(() => emailjs.init({publicKey: EMAILJS_KEY}));
+
+ 
+    const handleSubmit = async (e: React.SyntheticEvent) => {
+      e.preventDefault();
+      const serviceId = EMAILJS_SERVICEID;
+      const templateId = EMAILJS_TEMPLATEID;
+      try {
+        // setLoading(true);
+        await emailjs.send(serviceId, templateId, {
+         name: nameRef.current.value ,
+          userEmail: emailRef.current.value,
+          message: msgRef.current.value,
+          recipientName: "Charmae"
+        });
+        alert("email successfully sent check inbox");
+      } catch (error) {
+        console.log(error);
+      } finally {
+        // setLoading(false);
+      }
+    };
+    
   return (
+    
     <div
       id="contactSection"
       className="relative w-full sm:min-h-screen  flex flex-col justify-center items-center  bg-lightGray  "
@@ -90,7 +130,7 @@ export default function ContactSection() {
               LinkedIn
             </h3>
             <div className="font-light text-coral text-sm">
-              <a href="https://www.linkedin.com/in/charmae">Let's Connect!</a>
+              <a href="https://www.linkedin.com/in/charmae">Let&apos;s Connect!</a>
             </div>
           </div>
         </div>
@@ -98,20 +138,22 @@ export default function ContactSection() {
 
       <div className=" relative place-items-start w-2/3  items-start bg-red">
         <div className="mx-auto w-full max-w-[600px]">
-          {/* <form action="/" method="POST"> */}
+         <form className="for" onSubmit={handleSubmit}> 
             <div className="mb-3">
              
               <input
+              ref={nameRef}
                 type="text"
                 name="name"
                 id="name"
-                placeholder="Full Name"
+                placeholder="Name"
                 className="w-full rounded-md border border-[#e0e0e0] bg-white py-1 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md placeholder:-translate-x-4"
               />
             </div>
             <div className="mb-3">
             
               <input
+              ref={emailRef}
                 type="email"
                 name="email"
                 id="email"
@@ -119,32 +161,25 @@ export default function ContactSection() {
                 className="w-full rounded-md border border-[#e0e0e0] bg-white py-1 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md placeholder:-translate-x-4"
               />
             </div>
-            <div className="mb-3">
-              
-              <input
-                type="text"
-                name="subject"
-                id="subject"
-                placeholder="Enter your subject"
-                className="w-full rounded-md border border-[#e0e0e0] bg-white py-1 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md placeholder:-translate-x-4"
-              />
-            </div>
+
             <div className="mb-3">
              
               <textarea
+               ref={msgRef}
                 name="message"
                 id="message"
                 placeholder="Type your message"
                 rows={5}
+                maxLength={1000}
                 className="w-full resize-none rounded-md border border-[#e0e0e0] bg-white py-1 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md placeholder:-translate-x-4"
               ></textarea>
             </div>
             <div>
-              <button className="hover:shadow-form rounded-full bg-gray py-3 px-8 text-base font-semibold text-white outline-none">
+              <button className="hover:shadow-form rounded-full bg-gray py-3 px-8 text-base font-semibold text-white outline-none" type="submit">
                 Submit
               </button>
             </div>
-          {/* </form> */}
+           </form> 
         </div>
       </div>
       </div>

@@ -75,6 +75,10 @@ jobs:
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
       - name: Build with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
+        env:
+          EMAILJS_SERVICEID: ${{secrets.EMAILJS_SERVICEID}}
+          EMAILJS_KEY: ${{secrets.EMAILJS_KEY}}
+          EMAILJS_TEMPLATEID: ${{vars.EMAILJS_TEMPLATEID}}
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
