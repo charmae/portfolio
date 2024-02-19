@@ -34,7 +34,9 @@ jobs:
     env:
       EMAILJS_SERVICEID: ${{ secrets.EMAILJS_SERVICEID }}
       EMAILJS_KEY: ${{ secrets.EMAILJS_KEY }}
-      EMAILJS_TEMPLATEID: ${{ vars.EMAILJS_TEMPLATEID }} 
+      EMAILJS_TEMPLATEID: ${{ vars.EMAILJS_TEMPLATEID }}
+      EMAILJS_RECAPTCHA: ${{ secrets.EMAILJS_RECAPTCHA }}
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -68,10 +70,6 @@ jobs:
           #
           # You may remove this line if you want to manage the configuration yourself.
           #static_site_generator: next
-      - name: Check variables
-        run: |
-          echo "EMAILJS_SERVICEID variable : ${{ env.EMAILJS_SERVICEID }}"
-          echo "EMAILJS_TEMPLATEID variable : $EMAILJS_TEMPLATEID"
       - name: Restore cache
         uses: actions/cache@v4
         with:
@@ -90,6 +88,7 @@ jobs:
           EMAILJS_SERVICEID: ${{ secrets.EMAILJS_SERVICEID }}
           EMAILJS_KEY: ${{ secrets.EMAILJS_KEY }}
           EMAILJS_TEMPLATEID: ${{ vars.EMAILJS_TEMPLATEID }} 
+          EMAILJS_RECAPTCHA: ${{ secrets.EMAILJS_RECAPTCHA }}
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
@@ -104,6 +103,7 @@ jobs:
       EMAILJS_SERVICEID: ${{ secrets.EMAILJS_SERVICEID }}
       EMAILJS_KEY: ${{ secrets.EMAILJS_KEY }}
       EMAILJS_TEMPLATEID: ${{ vars.EMAILJS_TEMPLATEID }} 
+      EMAILJS_RECAPTCHA: ${{ secrets.EMAILJS_RECAPTCHA }}
     runs-on: ubuntu-latest
     needs: build
     steps:
