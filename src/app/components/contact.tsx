@@ -10,8 +10,6 @@ const EMAILJS_TEMPLATEID = process.env.EMAILJS_TEMPLATEID as string;
 
 
 export default function ContactSection() {
-    console.log("Contact section")
-    console.log("service Id:" + EMAILJS_SERVICEID);
 
     const emailRef = useRef<HTMLInputElement >(null!);
     const nameRef = useRef<HTMLInputElement>(null!);
@@ -32,9 +30,9 @@ export default function ContactSection() {
          name: nameRef.current.value ,
           userEmail: emailRef.current.value,
           message: msgRef.current.value,
-          recipientName: "Charmae"
+          recipientName: "GCharmae Porfolio"
         });
-        alert("email successfully sent check inbox");
+        alert("Message Sent");
       } catch (error) {
         console.log(error);
       } finally {
