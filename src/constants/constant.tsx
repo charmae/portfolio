@@ -49,14 +49,29 @@ export const PROJECT_ITEMS: ProjectType[] = [
       "A simple and clean portfolio built with React.js and Next.js. Showcase your skills, projects, and experience in a responsive and user-friendly interface.",
     features: ["Responsive"],
     techStack: [{
-      name:"ReactJs",
+      name:"React",
       description: "",
       url: "https://react.dev/"
     },
     {
-      name:"NextJs",
+      name:"Next.js",
       description: "",
       url: "https://nextjs.org/"
+    },
+    {
+      name:"Tailwind CSS",
+      description: "",
+      url: "https://tailwindcss.com/"
+    },
+    {
+      name:"EmailJS",
+      description: "",
+      url: "https://www.emailjs.com/"
+    },
+    {
+      name:"Re-Captcha",
+      description: "",
+      url: "https://www.google.com/recaptcha"
     }],
       images: [
       {

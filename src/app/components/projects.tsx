@@ -51,9 +51,10 @@ export default function ProjectSection() {
                     </a>
                   </p>
                 </div>
-                <div className="relative font-light text-gray-500 sm:text-sm mt-5">
+                <div className="relative font-light text-gray-500 sm:text-sm mt-5 grid flex-cols grid-cols-2 ">
                   {project.techStack.map((tech: TechStackType) => (
-                    <p key={tech.name} className="mb-1">
+                    <div key={tech.name} >
+                    <p className="mb-1">
                       <a
                         href={tech.url}
                         className="text-orange-500 underline  underline-offset-4 "
@@ -61,6 +62,7 @@ export default function ProjectSection() {
                         {tech.name}
                       </a>
                     </p>
+                    </div>
                   ))}
                 </div>
 
@@ -72,9 +74,9 @@ export default function ProjectSection() {
                     key={projectImg.id as string}
                     src={projectImg.imageURL}
                     alt={project.name}
-                    width="500"
-                    height="50"
-                    className=" block mx-auto border-2   border-t-gray  border-b-gray "
+                    width={0}
+                    height={0}
+                    className="w-full sm:w-3/4 block mx-auto border-2   border-t-gray  border-b-gray justify-items-center items-center justify-center"
                   />
                 ))}
               </div>

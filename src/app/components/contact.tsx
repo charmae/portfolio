@@ -73,7 +73,7 @@ export default function ContactSection() {
         </h2>
       </div>
 
-      <div className=" relative place-items-center w-full   flex flex-col sm:flex-row justify-center items-center ">
+      <div className=" relative place-items-center w-full   flex flex-col-reverse sm:flex-row justify-center items-center ">
         <div className=" relative place-items-center w-full  sm:w-1/3  grid  pb-5   ">
           <div className="w-full sm:w-1/2 flex flex-row flex-no-wrap justify-center px-4  sm:px-8 py-5 ">
             <div className="sm:w-1/3 xl:w-1/4 px-1">
@@ -153,10 +153,10 @@ export default function ContactSection() {
           </div>
         </div>
 
-        <div className=" relative place-items-start sm:w-1/2  items-start bg-red">
-          <div className=" w-full max-w-[600px] sm:items-start sm:justify-start">
+        <div className=" relative place-items-start sm:w-1/2 w-full  items-start bg-red">
+          <div className=" w-full px-5 sm:max-w-[600px] sm:items-start sm:justify-start">
             <div
-              id="toast-simple"
+              id="alert"
               className="flex items-center w-full bg-gray p-4 mb-3 space-x-4 rtl:space-x-reverse text-gray-500 bg-white divide-x rtl:divide-x-reverse divide-gray-200 
               rounded-lg shadow dark:text-gray-400 dark:divide-gray-700 space-x dark:bg-gray-800"
               role="alert"  style={{visibility: showAlert ? 'visible' : 'hidden' }} 
