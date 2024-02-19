@@ -8,6 +8,7 @@ export type SkillItemType = {
   name: string;
   icon: string;
   proficiency: string;
+  skillUrl: string;
 };
 
 export type ProjectType = {
@@ -71,41 +72,50 @@ export const SKILL_ITEMS: SkillItemType[] = [
     name: "Java",
     proficiency: "Expert",
     icon: "/portfolio/skillset/java-skill2.png",
+    skillUrl: "https://www.oracle.com/ph/java/"
   },
   {
     name: "Spring ",
     proficiency: "Expert",
     icon: "/portfolio/skillset/spring-skill.svg",
+    skillUrl: "https://spring.io/"
   },
   {
     name: "MuleSoft",
     proficiency: "Advanced",
     icon: "/portfolio/skillset/mulesoft-skill.png",
+    skillUrl: "https://www.mulesoft.com"
+
   },
   {
-    name: "HL7 FHIR",
+    name: "HL7 V2/FHIR",
     proficiency: "Advanced",
     icon: "/portfolio/skillset/hl7-skill.png",
+    skillUrl: "https://www.hl7.org"
   },
   {
     name: "TypeScript",
     proficiency: "Proficient",
     icon: "/portfolio/skillset/typescript-skill.png",
+    skillUrl: "https://www.typescriptlang.org/"
   },
   {
     name: "JavaScript",
     proficiency: "Proficient",
     icon: "/portfolio/skillset/javascript-skill.svg",
+    skillUrl: "https://developer.oracle.com/languages/javascript.html"
   },
   {
     name: "Angular",
     proficiency: "Proficient",
     icon: "/portfolio/skillset/angular-skill.svg",
+    skillUrl: "https://angular.io/"
   },
   {
     name: "React",
     proficiency: "Intermediate",
     icon: "/portfolio/skillset/react-skill.png",
+    skillUrl: "https://react.dev/"
   },
 ];
 

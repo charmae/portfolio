@@ -1,10 +1,7 @@
 "use client";
 import Image from "next/image";
 
-import {
-  SkillItemType,
-  SKILL_ITEMS as skills,
-} from "@/constants/constant";
+import { SkillItemType, SKILL_ITEMS as skills } from "@/constants/constant";
 import CertificateSection from "./certificates";
 
 export default function SkillSection() {
@@ -21,10 +18,7 @@ export default function SkillSection() {
 
       <div className=" relative place-items-center w-full sm:w-3/4 grid py-5  items-center sm:grid-cols-3 sm:gap-3 grid-cols-2 gap-0">
         {skills.map((skill: SkillItemType) => (
-          <div
-            className="w-full flex   p-2 sm:p-1 "
-            key={skill.name}
-          >
+          <div className="w-full flex   p-2 sm:p-1 " key={skill.name}>
             <div className="w-1/3 px-2 sm:px-0">
               <Image
                 src={skill.icon}
@@ -35,9 +29,11 @@ export default function SkillSection() {
               />
             </div>
             <div className="relative w-2/3 xl:w-3/4 ">
-              <h3 className="tracking-wide  font-bold sm:text-xl text-lg  mb-0">
-                {skill.name}
-              </h3>
+              <a href={skill.skillUrl} target="_blank">
+                <h3 className="tracking-wide  font-bold sm:text-xl text-lg  mb-0">
+                  {skill.name}
+                </h3>
+              </a>
               <div className="relative font-light text-gray-500 sm:text-sm">
                 <p>{skill.proficiency}</p>
               </div>
@@ -45,11 +41,12 @@ export default function SkillSection() {
           </div>
         ))}
       </div>
-      <CertificateSection/>
+      <CertificateSection />
       <div className="sm:flex sm:flex-row sm:w-full justify-center sm:pt-20 invisible sm:visible">
         <a
           className="px-10 py-2 my-10 text-white bg-gray rounded-full shadow-md text-lg hover:bg-gray-800 hover:border-red"
-          href="#projectSection" >
+          href="#projectSection"
+        >
           Take a Tour of My Work
         </a>
       </div>
