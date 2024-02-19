@@ -36,7 +36,6 @@ jobs:
       EMAILJS_KEY: ${{ secrets.EMAILJS_KEY }}
       EMAILJS_TEMPLATEID: ${{ vars.EMAILJS_TEMPLATEID }}
       EMAILJS_RECAPTCHA: ${{ secrets.EMAILJS_RECAPTCHA }}
-
     steps:
       - name: Checkout
         uses: actions/checkout@v4

@@ -9,26 +9,28 @@ import Parser from "html-react-parser";
 
 export default function About() {
   return (
-    <div className="w-full sm:min-h-screen flex flex-col justify-center items-center bg-white">
+    <section>
+    <div className="w-full sm:min-h-screen flex flex-col justify-center  bg-white">
       <div className="relative flex place-items-center  justify-between self-center items-center  flex-col sm:flex-row w-full md:w-5/6 xl:w-2/3 px-4  sm:px-0 h-full">
         <div className="w-2/5 text-center sm:text-left pt-20 sm:pt-0 sm:py-4  sm:px-8 md:px-10">
           <Image
             src={aboutMe.avatarIcon}
             alt="photo Logo"
-            width={350}
-            height={30}
+            width={0}
+            height={0}
             priority
-            className="mx-auto rounded-full"
+            className="w-3/4 mx-auto rounded-full"
           />
         </div>
         <div className=" p-5 sm:w-3/5  w-full">
-          <div className="w-full flex justify-center items-center sm:justify-start ">
+          <div className="w-full flex flex-row justify-center items-center sm:items-start sm:justify-start ">
             <Image
               src={aboutMe.nameIcon}
               alt="Name Text Logo"
-              width={300}
-              height={10}
+              width={0}
+              height={0}
               priority
+              className="w-1/2 block   "
             />
           </div>
           <div className="place-items-center pt-2 text-center sm:text-left">
@@ -65,5 +67,6 @@ export default function About() {
         </a>
       </div>
     </div>
+    </section>
   );
 }

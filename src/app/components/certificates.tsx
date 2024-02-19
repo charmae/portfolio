@@ -5,8 +5,8 @@ import { CertType, CERT_LIST as certList } from "@/constants/constant";
 
 export default function CertificateSection() {
   return (
-    <div  className="relative flex flex-col justify-center items-center  bg-orange-50 "
-    >
+    <section>
+    <div  className="relative flex flex-col justify-center items-center  ">
       <div className="relative text-center w-full px-1 pt-5 sm:px-0">
         <h2 className="relative w-full font-bold  text-gray-800 text-2xl mb-4  ">
           Certifications
@@ -24,9 +24,9 @@ export default function CertificateSection() {
                 <Image
                   src={cert.icon}
                   alt={cert.name}
-                  width={115}
-                  height={24}
-                  className="block mx-auto"
+                  width={0}
+                  height={0}
+                  className="w-1/2 h-auto block mx-auto"
                   priority
                 />
               </div>
@@ -42,5 +42,6 @@ export default function CertificateSection() {
       </div>
       
     </div>
+    </section>
   );
 }

@@ -10,7 +10,8 @@ const nextConfig = {
         EMAILJS_KEY: process.env.EMAILJS_KEY, 
         EMAILJS_SERVICEID: process.env.EMAILJS_SERVICEID, 
         EMAILJS_TEMPLATEID: process.env.EMAILJS_TEMPLATEID,
-        EMAILJS_RECAPTCHA: process.env.EMAILJS_RECAPTCHA
+        EMAILJS_RECAPTCHA: process.env.EMAILJS_RECAPTCHA,
+        NEXT_PUBLIC_EMAILJS_RECAPTCHA: process.env.EMAILJS_RECAPTCHA
     }
 };
 

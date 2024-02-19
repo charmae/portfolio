@@ -29,9 +29,9 @@ export default function SkillSection() {
               <Image
                 src={skill.icon}
                 alt={skill.name}
-                width="50"
-                height="50"
-                className=" block mx-auto "
+                width={0}
+                height={0}
+                className="w-2/5 block mx-auto "
               />
             </div>
             <div className="relative w-2/3 xl:w-3/4 ">
