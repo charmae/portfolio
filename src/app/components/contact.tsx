@@ -7,7 +7,6 @@ import ReCAPTCHA from "react-google-recaptcha";
 const EMAILJS_KEY = process.env.EMAILJS_KEY as string;
 const EMAILJS_SERVICEID = process.env.EMAILJS_SERVICEID as string;
 const EMAILJS_TEMPLATEID = process.env.EMAILJS_TEMPLATEID as string;
-const EMAILJS_RECAPTCHA = process.env.EMAILJS_RECAPTCHA as string;
 const NEXT_PUBLIC_EMAILJS_RECAPTCHA = process.env
   .NEXT_PUBLIC_EMAILJS_RECAPTCHA as string;
 

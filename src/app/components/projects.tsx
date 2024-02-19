@@ -88,7 +88,7 @@ export default function ProjectSection() {
         <a
           className="px-10 py-2 my-10   hover:border-t-coral border-t-2  border-t-white  border-b-blue-navy border-b-2 text-lg hover:shadow "
           href="#contactSection" >
-          Discover How to Reach Me
+          Contact Me Here
         </a>
       </div>
       </div>
