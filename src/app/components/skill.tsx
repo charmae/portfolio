@@ -50,7 +50,7 @@ export default function SkillSection() {
         <a
           className="px-10 py-2 my-10 text-white bg-gray rounded-full shadow-md text-lg hover:bg-gray-800 hover:border-red"
           href="#projectSection" >
-          See Projects
+          Take a Tour of My Work
         </a>
       </div>
     </div>

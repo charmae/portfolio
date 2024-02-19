@@ -69,12 +69,12 @@ export const PROJECT_ITEMS: ProjectType[] = [
 export const SKILL_ITEMS: SkillItemType[] = [
   {
     name: "Java",
-    proficiency: "Advanced",
+    proficiency: "Expert",
     icon: "/portfolio/skillset/java-skill2.png",
   },
   {
     name: "Spring ",
-    proficiency: "Advanced",
+    proficiency: "Expert",
     icon: "/portfolio/skillset/spring-skill.svg",
   },
   {
@@ -83,25 +83,29 @@ export const SKILL_ITEMS: SkillItemType[] = [
     icon: "/portfolio/skillset/mulesoft-skill.png",
   },
   {
+    name: "HL7 FHIR",
+    proficiency: "Advanced",
+    icon: "/portfolio/skillset/hl7-skill.png",
+  },
+  {
     name: "TypeScript",
-    proficiency: "Intermediate",
+    proficiency: "Proficient",
     icon: "/portfolio/skillset/typescript-skill.png",
   },
   {
     name: "JavaScript",
-    proficiency: "Intermediate",
+    proficiency: "Proficient",
     icon: "/portfolio/skillset/javascript-skill.svg",
-  },
-
-  {
-    name: "HL7 FHIR",
-    proficiency: "Intermediate",
-    icon: "/portfolio/skillset/hl7-skill.png",
   },
   {
     name: "Angular",
-    proficiency: "Intermediate",
+    proficiency: "Proficient",
     icon: "/portfolio/skillset/angular-skill.svg",
+  },
+  {
+    name: "React",
+    proficiency: "Intermediate",
+    icon: "/portfolio/skillset/react-skill.png",
   },
 ];
 

@@ -69,7 +69,7 @@ export default function ContactSection() {
     >
       <div className="relative self-center text-center w-full sm:pt-0 p-5 sm:p-10">
         <h2 className="font-bold tracking-wider text-gunmetal text-3xl ">
-          Contact Me
+          Drop Me a Message
         </h2>
       </div>
 
@@ -188,7 +188,8 @@ export default function ContactSection() {
                   name="name"
                   id="name"
                   placeholder="Name"
-                  className="w-full rounded-md border border-[#e0e0e0] bg-white py-1  text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md px-2"
+                  autoComplete="name"
+                  className="w-full border-t-2 border-b-2  border-[#e0e0e0] bg-white py-1  text-base font-medium text-gunmetal outline-none focus:border-coral focus:shadow-md px-2"
                 />
               </div>
               <div className="mb-3">
@@ -197,8 +198,9 @@ export default function ContactSection() {
                   type="email"
                   name="email"
                   id="email"
+                  autoComplete="name"
                   placeholder="Email Address"
-                  className="w-full rounded-md border border-[#e0e0e0] bg-white py-1  text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md px-2"
+                  className="w-full border-t-2 border-b-2  border-[#e0e0e0] bg-white py-1  text-base font-medium text-gunmetal outline-none focus:border-coral focus:shadow-md px-2"
                 />
               </div>
 
@@ -210,9 +212,9 @@ export default function ContactSection() {
                   placeholder="Type your message"
                   rows={5}
                   maxLength={1000}
-                  className="w-full resize-none rounded-md border 
-                  border-[#e0e0e0] bg-white py-1 px-2 text-base font-medium text-[#6B7280] 
-                  outline-none focus:border-[#6A64F1] focus:shadow-md "
+                  className="w-full resize-none border-t-2 border-b-2 
+                  border-[#e0e0e0] bg-white py-1 px-2 text-base font-medium text-gunmetal
+                  outline-none focus:border-coral focus:shadow-md "
                 ></textarea>
               </div>
               <div>

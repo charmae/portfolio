@@ -30,7 +30,8 @@ const config: Config = {
         500: '#f97316'
       },
       blue: {
-        500: '#0ea5e9'
+        500: '#0ea5e9',
+        navy: '#003568'
       }
     }
   },

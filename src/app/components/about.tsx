@@ -61,9 +61,9 @@ export default function About() {
       </div>
       <div className="sm:flex sm:flex-row sm:w-full justify-center sm:pt-20 invisible sm:visible">
         <a
-          className="px-10 py-2 my-10 text-white bg-gray rounded-full shadow-md text-lg hover:bg-gray-800 hover:border-red"
+          className="px-10 py-2 my-10   hover:border-t-coral border-t-2  border-t-white  border-b-blue-navy border-b-2 text-lg hover:shadow "
           href="#skillset" >
-          See Skill Set
+         Learn More about My Skill Set
         </a>
       </div>
     </div>
