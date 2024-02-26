@@ -91,10 +91,9 @@ export default function ContactSection() {
       id="contactSection"
       className="relative w-full sm:min-h-screen  flex flex-col justify-center items-center  bg-lightGray  "
     >
-
-      <div className=" relative place-items-center w-full   flex flex-col-reverse sm:flex-row justify-center items-center ">
-        <div className=" relative place-items-center w-full  sm:w-1/3  grid  pb-5   ">
-          <div className="w-full sm:w-1/2 flex flex-row flex-no-wrap justify-center px-4  sm:px-8 py-5 ">
+      <div className=" relative w-full   flex flex-col-reverse sm:flex-row justify-center ">
+        <div className=" relative  w-full  sm:w-1/3  grid  pb-5   ">
+          <div className="w-full sm:w-1/2 flex flex-row flex-no-wrap  px-4  sm:px-8 py-5 ">
             <div className="sm:w-1/3 xl:w-1/4 px-1">
               <Image
                 src="/portfolio/contact/email-icon.png"
@@ -113,7 +112,7 @@ export default function ContactSection() {
               </div>
             </div>
           </div>
-          <div className="w-full sm:w-1/2 flex flex-row flex-no-wrap justify-center px-4 sm:px-8 py-5">
+          <div className="w-full sm:w-1/2 flex flex-row flex-no-wrap px-4 sm:px-8 py-5">
             <div className="sm:w-1/3 xl:w-1/4 px-1">
               <Image
                 src="/portfolio/contact/resume-icon.png"
@@ -130,7 +129,7 @@ export default function ContactSection() {
               <div className="font-light text-coral text-sm">Coming Soon</div>
             </div>
           </div>
-          <div className="w-full sm:w-1/2 flex flex-row flex-no-wrap justify-center px-4 sm:px-8 py-5">
+          <div className="w-full sm:w-1/2 flex flex-row flex-no-wrap  px-4 sm:px-8 py-5">
             <div className="sm:w-1/3 xl:w-1/4 px-1">
               <Image
                 src="/portfolio/contact/linkedin-icon.png"
@@ -151,7 +150,7 @@ export default function ContactSection() {
               </div>
             </div>
           </div>
-          <div className="w-full sm:w-1/2 flex flex-row flex-no-wrap justify-center px-4 sm:px-8 py-5">
+          <div className="w-full sm:w-1/2 flex flex-row flex-no-wrap px-4 sm:px-8 py-5">
             <div className="sm:w-1/3 xl:w-1/4 px-1">
               <Image
                 src="/portfolio/contact/location-icon.png"
@@ -170,7 +169,10 @@ export default function ContactSection() {
               </div>
             </div>
           </div>
-          <div style={{ height: "23vh", width: "70%" }} className="p-2">
+          <div
+            style={{ height: "23vh", width: "90%" }}
+            className="px-4 sm:px-8 mb-10"
+          >
             <GoogleMapReact
               bootstrapURLKeys={{ key: NEXT_PUBLIC_GOOGLE_MAPS_API_KEY }}
               defaultCenter={defaultProps.center}
@@ -182,16 +184,16 @@ export default function ContactSection() {
         </div>
 
         <div className=" relative place-items-start sm:w-1/2 w-full  items-start bg-red">
-          <div className=" w-full px-5 sm:max-w-[600px] sm:items-start sm:justify-start">
-            <h2 className="font-bold tracking-wider text-gunmetal text-3xl ">
+          <div className=" w-full px-5 sm:mx-20 sm:max-w-[750px] sm:items-start sm:justify-start">
+            <h2 className="font-bold tracking-wider text-gunmetal text-3xl mt-10 sm:mt-0 ">
               Drop Me a Message
             </h2>
             <div
               id="alert"
               className="flex items-center w-full bg-gray p-2  my-3 space-x-4 rtl:space-x-reverse text-gray-500 bg-cyan-500 divide-x rtl:divide-x-reverse divide-coral 
               shadow dark:text-gray-400 dark:divide-gray-700 space-x dark:bg-gray-800"
-              role="alert" 
-              // style={{ visibility: showAlert ? "visible" : "hidden" }}
+              role="alert"
+              style={{ visibility: showAlert ? "visible" : "hidden" }}
             >
               <svg
                 className="w-5 h-5 ml-2 mb-1  text-white dark:text-gray rotate-45"
@@ -269,6 +271,7 @@ export default function ContactSection() {
                 >
                   Send
                 </button>
+                <hr className="w-full my-12 h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-red-500 to-transparent opacity-50 dark:opacity-100" />
               </div>
             </form>
           </div>
