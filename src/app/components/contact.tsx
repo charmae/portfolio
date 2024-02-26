@@ -3,12 +3,15 @@ import Image from "next/image";
 import { useRef, useEffect, useState } from "react";
 import emailjs from "@emailjs/browser";
 import ReCAPTCHA from "react-google-recaptcha";
+import GoogleMapReact from "google-map-react";
 
 const EMAILJS_KEY = process.env.EMAILJS_KEY as string;
 const EMAILJS_SERVICEID = process.env.EMAILJS_SERVICEID as string;
 const EMAILJS_TEMPLATEID = process.env.EMAILJS_TEMPLATEID as string;
 const NEXT_PUBLIC_EMAILJS_RECAPTCHA = process.env
   .NEXT_PUBLIC_EMAILJS_RECAPTCHA as string;
+const NEXT_PUBLIC_GOOGLE_MAPS_API_KEY = process.env
+  .NEXT_PUBLIC_GOOGLE_MAPS_API_KEY as string;
 
 export default function ContactSection() {
   const emailRef = useRef<HTMLInputElement>(null!);
@@ -45,7 +48,6 @@ export default function ContactSection() {
     const token = await refCaptcha.current?.getValue();
     setShowAlert(false);
     try {
-      // setLoading(true);
       await emailjs.send(serviceId, templateId, {
         name: nameRef.current.value,
         userEmail: emailRef.current.value,
@@ -61,20 +63,34 @@ export default function ContactSection() {
     }
   };
 
-  let emptyStr: string = "";
+  const emptyStr: string = "";
   const MAX_LENGTH = 1500;
   const [textAreaValue, setTextAreaVAlue] = useState(emptyStr);
+
+  // Google maps start
+  const defaultProps = {
+    center: {
+      lat: 10.330256044792451,
+      lng: 123.90677247002175,
+    },
+    zoom: 5,
+  };
+
+  const renderMarkers = (map: any, maps: any) => {
+    let marker = new maps.Marker({
+      position: { lat: defaultProps.center.lat, lng: defaultProps.center.lng },
+      map,
+      title: "Cebu, PH",
+    });
+    return marker;
+  };
+  // Google maps end
 
   return (
     <div
       id="contactSection"
       className="relative w-full sm:min-h-screen  flex flex-col justify-center items-center  bg-lightGray  "
     >
-      <div className="relative self-center text-center w-full sm:pt-0 p-5 sm:p-10">
-        <h2 className="font-bold tracking-wider text-gunmetal text-3xl ">
-          Drop Me a Message
-        </h2>
-      </div>
 
       <div className=" relative place-items-center w-full   flex flex-col-reverse sm:flex-row justify-center items-center ">
         <div className=" relative place-items-center w-full  sm:w-1/3  grid  pb-5   ">
@@ -150,21 +166,32 @@ export default function ContactSection() {
                 Location
               </h3>
               <div className="font-light text-coral text-sm">
-                <a href="#">Cebu, Philippines</a>
+                Cebu, Philippines
               </div>
             </div>
           </div>
-
+          <div style={{ height: "23vh", width: "70%" }} className="p-2">
+            <GoogleMapReact
+              bootstrapURLKeys={{ key: NEXT_PUBLIC_GOOGLE_MAPS_API_KEY }}
+              defaultCenter={defaultProps.center}
+              defaultZoom={defaultProps.zoom}
+              yesIWantToUseGoogleMapApiInternals
+              onGoogleApiLoaded={({ map, maps }) => renderMarkers(map, maps)}
+            ></GoogleMapReact>
+          </div>
         </div>
 
         <div className=" relative place-items-start sm:w-1/2 w-full  items-start bg-red">
           <div className=" w-full px-5 sm:max-w-[600px] sm:items-start sm:justify-start">
+            <h2 className="font-bold tracking-wider text-gunmetal text-3xl ">
+              Drop Me a Message
+            </h2>
             <div
               id="alert"
-              className="flex items-center w-full bg-gray p-2  mb-3 space-x-4 rtl:space-x-reverse text-gray-500 bg-cyan-500 divide-x rtl:divide-x-reverse divide-coral 
+              className="flex items-center w-full bg-gray p-2  my-3 space-x-4 rtl:space-x-reverse text-gray-500 bg-cyan-500 divide-x rtl:divide-x-reverse divide-coral 
               shadow dark:text-gray-400 dark:divide-gray-700 space-x dark:bg-gray-800"
-              role="alert"
-              style={{ visibility: showAlert ? "visible" : "hidden" }}
+              role="alert" 
+              // style={{ visibility: showAlert ? "visible" : "hidden" }}
             >
               <svg
                 className="w-5 h-5 ml-2 mb-1  text-white dark:text-gray rotate-45"
@@ -215,7 +242,7 @@ export default function ContactSection() {
                   name="message"
                   id="message"
                   placeholder="Type your message"
-                  rows={5}
+                  rows={8}
                   maxLength={MAX_LENGTH}
                   onChange={(e) => setTextAreaVAlue(e.target.value)}
                   value={textAreaValue}

@@ -72,6 +72,11 @@ export const PROJECT_ITEMS: ProjectType[] = [
       name:"Re-Captcha",
       description: "",
       url: "https://www.google.com/recaptcha"
+    },
+    {
+      name:"Google Maps API",
+      description: "",
+      url: "https://developers.google.com/maps/documentation/javascript"
     }],
       images: [
       {
