@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { useRef, useEffect, useState, ChangeEvent } from "react";
+import { useRef, useEffect, useState } from "react";
 import emailjs from "@emailjs/browser";
 import ReCAPTCHA from "react-google-recaptcha";
 
@@ -16,9 +16,8 @@ export default function ContactSection() {
   const msgRef = useRef<HTMLTextAreaElement>(null!);
   const refCaptcha = useRef<ReCAPTCHA>(null!);
 
-  const [loading, setLoading] = useState(false);
   const [state, setState] = useState(true);
-  const [showAlert, setShowAlert]= useState(false);
+  const [showAlert, setShowAlert] = useState(false);
 
   useEffect(() => emailjs.init({ publicKey: EMAILJS_KEY }));
 
@@ -44,6 +43,7 @@ export default function ContactSection() {
     const serviceId = EMAILJS_SERVICEID;
     const templateId = EMAILJS_TEMPLATEID;
     const token = await refCaptcha.current?.getValue();
+    setShowAlert(false);
     try {
       // setLoading(true);
       await emailjs.send(serviceId, templateId, {
@@ -60,6 +60,10 @@ export default function ContactSection() {
       setState(false);
     }
   };
+
+  let emptyStr: string = "";
+  const MAX_LENGTH = 1500;
+  const [textAreaValue, setTextAreaVAlue] = useState(emptyStr);
 
   return (
     <div
@@ -113,25 +117,6 @@ export default function ContactSection() {
           <div className="w-full sm:w-1/2 flex flex-row flex-no-wrap justify-center px-4 sm:px-8 py-5">
             <div className="sm:w-1/3 xl:w-1/4 px-1">
               <Image
-                src="/portfolio/contact/location-icon.png"
-                alt="Location"
-                width="50"
-                height="50"
-                className=" block sm:mx-auto"
-              />
-            </div>
-            <div className="w-2/3 xl:w-3/4 justify-center items-center text-align-center">
-              <h3 className="tracking-wide text-gunmetal font-bold text-sm uppercase ">
-                Location
-              </h3>
-              <div className="font-light text-coral text-sm">
-                <a href="#">Cebu, Philippines</a>
-              </div>
-            </div>
-          </div>
-          <div className="w-full sm:w-1/2 flex flex-row flex-no-wrap justify-center px-4 sm:px-8 py-5">
-            <div className="sm:w-1/3 xl:w-1/4 px-1">
-              <Image
                 src="/portfolio/contact/linkedin-icon.png"
                 alt="LinkedIn"
                 width="40"
@@ -150,18 +135,39 @@ export default function ContactSection() {
               </div>
             </div>
           </div>
+          <div className="w-full sm:w-1/2 flex flex-row flex-no-wrap justify-center px-4 sm:px-8 py-5">
+            <div className="sm:w-1/3 xl:w-1/4 px-1">
+              <Image
+                src="/portfolio/contact/location-icon.png"
+                alt="Location"
+                width="50"
+                height="50"
+                className=" block sm:mx-auto"
+              />
+            </div>
+            <div className="w-2/3 xl:w-3/4 justify-center items-center text-align-center">
+              <h3 className="tracking-wide text-gunmetal font-bold text-sm uppercase ">
+                Location
+              </h3>
+              <div className="font-light text-coral text-sm">
+                <a href="#">Cebu, Philippines</a>
+              </div>
+            </div>
+          </div>
+
         </div>
 
         <div className=" relative place-items-start sm:w-1/2 w-full  items-start bg-red">
           <div className=" w-full px-5 sm:max-w-[600px] sm:items-start sm:justify-start">
             <div
               id="alert"
-              className="flex items-center w-full bg-gray p-4 mb-3 space-x-4 rtl:space-x-reverse text-gray-500 bg-white divide-x rtl:divide-x-reverse divide-gray-200 
-              rounded-lg shadow dark:text-gray-400 dark:divide-gray-700 space-x dark:bg-gray-800"
-              role="alert"  style={{visibility: showAlert ? 'visible' : 'hidden' }} 
+              className="flex items-center w-full bg-gray p-2  mb-3 space-x-4 rtl:space-x-reverse text-gray-500 bg-cyan-500 divide-x rtl:divide-x-reverse divide-coral 
+              shadow dark:text-gray-400 dark:divide-gray-700 space-x dark:bg-gray-800"
+              role="alert"
+              style={{ visibility: showAlert ? "visible" : "hidden" }}
             >
               <svg
-                className="w-5 h-5 text-blue-500 dark:text-gray rotate-45"
+                className="w-5 h-5 ml-2 mb-1  text-white dark:text-gray rotate-45"
                 aria-hidden="true"
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -175,7 +181,7 @@ export default function ContactSection() {
                   d="m9 17 8 2L9 1 1 19l8-2Zm0 0V9"
                 />
               </svg>
-              <div className="ps-4 text-sm font-normal text-gunmetal">
+              <div className="ps-4 text-sm font-normal text-white">
                 Message sent successfully.
               </div>
             </div>
@@ -210,11 +216,16 @@ export default function ContactSection() {
                   id="message"
                   placeholder="Type your message"
                   rows={5}
-                  maxLength={1000}
+                  maxLength={MAX_LENGTH}
+                  onChange={(e) => setTextAreaVAlue(e.target.value)}
+                  value={textAreaValue}
                   className="w-full resize-none border-t-2 border-b-2 
                   border-[#e0e0e0] bg-white py-1 px-2 text-base font-medium text-gunmetal
                   outline-none focus:border-coral focus:shadow-md "
                 ></textarea>
+                <p className="msg-remaining-text text-gray text-xs">
+                  Remaining characters: {MAX_LENGTH - textAreaValue.length}
+                </p>
               </div>
               <div>
                 <div className="pb-4">
@@ -229,7 +240,7 @@ export default function ContactSection() {
                   type="submit"
                   disabled={state}
                 >
-                  Submit
+                  Send
                 </button>
               </div>
             </form>

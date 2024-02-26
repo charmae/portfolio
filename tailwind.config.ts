@@ -32,6 +32,15 @@ const config: Config = {
       blue: {
         500: '#0ea5e9',
         navy: '#003568'
+      },
+      cyan: {
+        600: '#0891b2'
+      },
+      green: {
+        600: '#16a34a'
+      },
+      emerald: {
+        400: '#34d399'
       }
     }
   },

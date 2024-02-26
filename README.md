@@ -1,4 +1,4 @@
-# My Portfolio
+# Portfolio
 
 ![Portfolio Preview](https://gcharmae.com/portfolio/portfolio-screenshot.png)
 
@@ -8,10 +8,10 @@ A simple and clean portfolio built with React.js and Next.js. Showcase your skil
 
 ## Features
 
-- Responsive design
-- Skills and Certification section
-- Project showcase (pending)
-- Contact form (pending)
+- **Responsive design:** Ensuring a seamless experience across various devices.
+- **Skills and Certification section:** Showcase your diverse skill set and certifications confidently.
+- **Project showcase (in-progress):** A dedicated space for presenting your noteworthy projects.
+- **Contact form with EmailJs and reCAPTCHA v2:** Connect effortlessly with a forthcoming contact form, fortified with reCAPTCHA v2 for enhanced security.
 
 
 ## Demo
