@@ -3,15 +3,18 @@ import Image from "next/image";
 import { useRef, useEffect, useState } from "react";
 import emailjs from "@emailjs/browser";
 import ReCAPTCHA from "react-google-recaptcha";
-import GoogleMapReact from "google-map-react";
+// import GoogleMapReact from "google-map-react";
+import MapboxMap from "./mapbox-map";
 
 const EMAILJS_KEY = process.env.EMAILJS_KEY as string;
 const EMAILJS_SERVICEID = process.env.EMAILJS_SERVICEID as string;
 const EMAILJS_TEMPLATEID = process.env.EMAILJS_TEMPLATEID as string;
 const NEXT_PUBLIC_EMAILJS_RECAPTCHA = process.env
   .NEXT_PUBLIC_EMAILJS_RECAPTCHA as string;
-const NEXT_PUBLIC_GOOGLE_MAPS_API_KEY = process.env
-  .NEXT_PUBLIC_GOOGLE_MAPS_API_KEY as string;
+// const NEXT_PUBLIC_GOOGLE_MAPS_API_KEY = process.env
+// .NEXT_PUBLIC_GOOGLE_MAPS_API_KEY as string;
+
+const MAPBOX_TOKEN = process.env.REACT_APP_MAPBOX_TOKEN || "";
 
 export default function ContactSection() {
   const emailRef = useRef<HTMLInputElement>(null!);
@@ -68,22 +71,22 @@ export default function ContactSection() {
   const [textAreaValue, setTextAreaVAlue] = useState(emptyStr);
 
   // Google maps start
-  const defaultProps = {
-    center: {
-      lat: 10.330256044792451,
-      lng: 123.90677247002175,
-    },
-    zoom: 5,
-  };
+  // const defaultProps = {
+  //   center: {
+  //     lat: 10.330256044792451,
+  //     lng: 123.90677247002175,
+  //   },
+  //   zoom: 5,
+  // };
 
-  const renderMarkers = (map: any, maps: any) => {
-    let marker = new maps.Marker({
-      position: { lat: defaultProps.center.lat, lng: defaultProps.center.lng },
-      map,
-      title: "Cebu, PH",
-    });
-    return marker;
-  };
+  // const renderMarkers = (map: any, maps: any) => {
+  //   let marker = new maps.Marker({
+  //     position: { lat: defaultProps.center.lat, lng: defaultProps.center.lng },
+  //     map,
+  //     title: "Cebu, PH",
+  //   });
+  //   return marker;
+  // };
   // Google maps end
 
   return (
@@ -173,13 +176,15 @@ export default function ContactSection() {
             style={{ height: "23vh", width: "90%" }}
             className="px-4 sm:px-8 mb-10"
           >
-            <GoogleMapReact
+            {/* <GoogleMapReact
               bootstrapURLKeys={{ key: NEXT_PUBLIC_GOOGLE_MAPS_API_KEY }}
               defaultCenter={defaultProps.center}
               defaultZoom={defaultProps.zoom}
               yesIWantToUseGoogleMapApiInternals
               onGoogleApiLoaded={({ map, maps }) => renderMarkers(map, maps)}
-            ></GoogleMapReact>
+            ></GoogleMapReact> */}
+
+            <MapboxMap />
           </div>
         </div>
 
