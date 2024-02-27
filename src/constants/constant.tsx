@@ -74,9 +74,9 @@ export const PROJECT_ITEMS: ProjectType[] = [
       url: "https://www.google.com/recaptcha"
     },
     {
-      name:"Google Maps API",
+      name:"Mapbox",
       description: "",
-      url: "https://developers.google.com/maps/documentation/javascript"
+      url: "https://www.mapbox.com/"
     }],
       images: [
       {

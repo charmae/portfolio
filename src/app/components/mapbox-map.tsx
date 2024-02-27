@@ -2,7 +2,7 @@ import * as React from "react";
 import mapboxgl from "mapbox-gl";
 import "mapbox-gl/dist/mapbox-gl.css";
 
-function MapboxMap() {
+export default function  MapboxMap() {
   const [map, setMap] = React.useState<mapboxgl.Map>();
 
   const mapNode = React.useRef(null);
@@ -15,12 +15,12 @@ function MapboxMap() {
     const mapboxMap = new mapboxgl.Map({
       container: node,
       accessToken: process.env.NEXT_PUBLIC_MAPBOX_KEY,
-      style: "mapbox://styles/mapbox/streets-v11",
+      style: "mapbox://styles/mapbox/light-v10",
       center: [123.90677247002175, 10.330256044792451],
       zoom: 5,
     });
 
-    const marker = new mapboxgl.Marker({ color: "red", rotation: 0 })
+    const marker = new mapboxgl.Marker({ color: "#EF8354", rotation: 0 })
     .setLngLat([123.90677247002175, 10.330256044792451])
     .addTo(mapboxMap);
 
@@ -40,4 +40,3 @@ function MapboxMap() {
   return <div ref={mapNode} style={{ width: "100%", height: "100%" }} />;
 }
 
-export default MapboxMap;
