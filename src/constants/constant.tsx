@@ -26,12 +26,12 @@ export type TechStackType = {
   name: string;
   description: string;
   url: string;
-}
+};
 
 export type ImageType = {
   id: string;
   imageURL: string;
-}
+};
 
 export type SocialMediaType = {
   label: string;
@@ -48,37 +48,39 @@ export const PROJECT_ITEMS: ProjectType[] = [
     description:
       "A simple and clean portfolio built with React.js and Next.js. Showcase your skills, projects, and experience in a responsive and user-friendly interface.",
     features: ["Responsive"],
-    techStack: [{
-      name:"React",
-      description: "",
-      url: "https://react.dev/"
-    },
-    {
-      name:"Next.js",
-      description: "",
-      url: "https://nextjs.org/"
-    },
-    {
-      name:"Tailwind CSS",
-      description: "",
-      url: "https://tailwindcss.com/"
-    },
-    {
-      name:"EmailJS",
-      description: "",
-      url: "https://www.emailjs.com/"
-    },
-    {
-      name:"Re-Captcha",
-      description: "",
-      url: "https://www.google.com/recaptcha"
-    },
-    {
-      name:"Mapbox",
-      description: "",
-      url: "https://www.mapbox.com/"
-    }],
-      images: [
+    techStack: [
+      {
+        name: "React",
+        description: "",
+        url: "https://react.dev/",
+      },
+      {
+        name: "Next.js",
+        description: "",
+        url: "https://nextjs.org/",
+      },
+      {
+        name: "Tailwind CSS",
+        description: "",
+        url: "https://tailwindcss.com/",
+      },
+      {
+        name: "EmailJS",
+        description: "",
+        url: "https://www.emailjs.com/",
+      },
+      {
+        name: "Re-Captcha",
+        description: "",
+        url: "https://www.google.com/recaptcha",
+      },
+      {
+        name: "Mapbox",
+        description: "",
+        url: "https://www.mapbox.com/",
+      },
+    ],
+    images: [
       {
         id: "full-screenshot",
         imageURL: "/portfolio/project/portfolio-img.png",
@@ -92,50 +94,49 @@ export const SKILL_ITEMS: SkillItemType[] = [
     name: "Java",
     proficiency: "Expert",
     icon: "/portfolio/skillset/java-skill2.png",
-    skillUrl: "https://www.oracle.com/ph/java/"
+    skillUrl: "https://www.oracle.com/ph/java/",
   },
   {
     name: "Spring ",
     proficiency: "Expert",
     icon: "/portfolio/skillset/spring-skill.svg",
-    skillUrl: "https://spring.io/"
+    skillUrl: "https://spring.io/",
   },
   {
     name: "MuleSoft",
     proficiency: "Advanced",
     icon: "/portfolio/skillset/mulesoft-skill.png",
-    skillUrl: "https://www.mulesoft.com"
-
+    skillUrl: "https://www.mulesoft.com",
   },
   {
     name: "HL7 V2/FHIR",
     proficiency: "Advanced",
     icon: "/portfolio/skillset/hl7-skill.png",
-    skillUrl: "https://www.hl7.org"
+    skillUrl: "https://www.hl7.org",
   },
   {
     name: "TypeScript",
-    proficiency: "Proficient",
+    proficiency: "Intermediate",
     icon: "/portfolio/skillset/typescript-skill.png",
-    skillUrl: "https://www.typescriptlang.org/"
+    skillUrl: "https://www.typescriptlang.org/",
   },
   {
     name: "JavaScript",
-    proficiency: "Proficient",
+    proficiency: "Intermediate",
     icon: "/portfolio/skillset/javascript-skill.svg",
-    skillUrl: "https://developer.oracle.com/languages/javascript.html"
+    skillUrl: "https://developer.oracle.com/languages/javascript.html",
   },
   {
     name: "Angular",
-    proficiency: "Proficient",
+    proficiency: "Intermediate",
     icon: "/portfolio/skillset/angular-skill.svg",
-    skillUrl: "https://angular.io/"
+    skillUrl: "https://angular.io/",
   },
   {
     name: "React",
     proficiency: "Intermediate",
     icon: "/portfolio/skillset/react-skill.png",
-    skillUrl: "https://react.dev/"
+    skillUrl: "https://react.dev/",
   },
 ];
 
@@ -209,5 +210,50 @@ export const CERT_LIST = [
     name: "MuleSoft Certified Developer",
     href: "https://drive.google.com/file/d/1WuW6uZgwAxSLgXe-cZPRq8tRdBgDsKtn/view?usp=sharing",
     icon: "/portfolio/certificate/mule-dev-cert.png",
+  },
+];
+
+export type SkillProfLevelType = {
+  level: string;
+  knowledge: string;
+  experience: string;
+  performance: string;
+  problem_solving: string;
+  awareness: string;
+};
+
+export const SKILL_PROF_LEVELS: SkillProfLevelType[] = [
+  {
+    level: "Beginner",
+    knowledge: "Basic understanding of fundamental concepts.",
+    experience: "Limited practical experience.",
+    performance: "Requires guidance and supervision.",
+    problem_solving: "Handles simple tasks independently.",
+    awareness: "Limited awareness of advanced techniques or nuances.",
+  },
+  {
+    level: "Intermediate",
+    knowledge: "Solid understanding of core principles.",
+    experience: "Demonstrated practical application.",
+    performance: "Works independently with occasional guidance.",
+    problem_solving: "Solves routine problems effectively.",
+    awareness: "Recognizes advanced concepts but may lack deep expertise.",
+  },
+  {
+    level: "Advanced",
+    knowledge: "In-depth understanding of advanced concepts.",
+    experience: "Substantial hands-on experience.",
+    performance: "Works independently at a high level.",
+    problem_solving: "Analyzes and solves complex problems.",
+    awareness: "Aware of industry trends and best practices.",
+  },
+
+  {
+    level: "Expert",
+    knowledge: "Mastery, including specialized areas.",
+    experience: "Extensive, often spanning many years.",
+    performance: "Recognized authority, often consulted for expertise.",
+    problem_solving: "Solves highly complex and novel problems.",
+    awareness: "Innovates, contributes to the evolution of the field.",
   },
 ];

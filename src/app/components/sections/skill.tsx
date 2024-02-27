@@ -1,8 +1,10 @@
 "use client";
 import Image from "next/image";
 
-import { SkillItemType, SKILL_ITEMS as skills } from "@/constants/constant";
+import { SKILL_PROF_LEVELS, SkillItemType, SKILL_ITEMS as skills } from "@/constants/constant";
 import CertificateSection from "./certificates";
+import {SkillTooltip}  from "../ui/skill-tooltip";
+
 
 export default function SkillSection() {
   return (
@@ -34,8 +36,21 @@ export default function SkillSection() {
                   {skill.name}
                 </h3>
               </a>
-              <div className="relative font-light text-gray-500 sm:text-sm">
-                <p>{skill.proficiency}</p>
+              <div className="relative font-light text-gray-500 sm:text-sm tooltip_element">
+               
+                <SkillTooltip message={
+                  <section >
+                  <div className="font-semibold font-sm text-coral">{skill.proficiency} Level</div> 
+                  {(SKILL_PROF_LEVELS.find(i => i.level == skill.proficiency)?.knowledge || '')}<br/>
+                  {(SKILL_PROF_LEVELS.find(i => i.level == skill.proficiency)?.experience || '')}<br/>
+                  {(SKILL_PROF_LEVELS.find(i => i.level == skill.proficiency)?.performance || '')}<br/>
+                  {(SKILL_PROF_LEVELS.find(i => i.level == skill.proficiency)?.problem_solving || '')}<br/>
+                  {(SKILL_PROF_LEVELS.find(i => i.level == skill.proficiency)?.awareness || '')}<br/>
+                  </section>
+                  } position="bottom" />
+
+                  {skill.proficiency}
+                
               </div>
             </div>
           </div>
@@ -45,8 +60,7 @@ export default function SkillSection() {
       <div className="sm:flex sm:flex-row sm:w-full justify-center sm:pt-20 invisible sm:visible">
         <a
           className="px-10 py-2 my-10 text-white bg-gray rounded-full shadow-md text-lg hover:bg-gray-800 hover:border-red"
-          href="#projectSection"
-        >
+          href="#projectSection" >
           Take a Tour of My Work
         </a>
       </div>

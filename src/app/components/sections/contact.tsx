@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
-import MapboxMap from "./mapbox-map";
-import MessageForm from "./message-form";
+import MapboxMap from "../ui/mapbox-map";
+import MessageForm from "../ui/message-form";
 
 export default function ContactSection() {
   return (
