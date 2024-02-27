@@ -42,9 +42,10 @@ export default function ContactSection() {
             </div>
             <div className="w-2/3 xl:w-3/4 justify-center items-center text-align-center">
               <h3 className="tracking-wide text-gunmetal font-bold text-sm uppercase ">
-                Resume
+                CV/Resume
               </h3>
-              <div className="font-light text-coral text-sm">Coming Soon</div>
+              <div className="font-light text-coral text-sm">Upon Request </div>
+              <div className="font-light text-coral text-xs">Send me a message -&gt;</div>
             </div>
           </div>
           <div className="w-full sm:w-1/2 flex flex-row flex-no-wrap  px-4 sm:px-8 py-3">
@@ -99,6 +100,7 @@ export default function ContactSection() {
             <h2 className="font-bold tracking-wider  text-gunmetal text-3xl mt-10 sm:mt-0 ">
               Drop Me a Message
             </h2>
+            <p className="text-gray text-xs mt-1">Swift and Responsive: Drop me a message anytime; <p className="underline inline">my inbox is always open!</p></p>
             <MessageForm />
           </div>
         </div>

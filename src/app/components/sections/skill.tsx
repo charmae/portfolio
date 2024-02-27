@@ -32,11 +32,11 @@ export default function SkillSection() {
             </div>
             <div className="relative w-2/3 xl:w-3/4 ">
               <a href={skill.skillUrl} target="_blank">
-                <h3 className="tracking-wide  font-bold sm:text-xl text-lg  mb-0">
+                <h3 className="tracking-wide inline-block font-bold sm:text-xl text-lg  mb-0 hover:text-coral">
                   {skill.name}
                 </h3>
               </a>
-              <div className="relative font-light text-gray-500 sm:text-sm tooltip_element">
+              <div className="relative font-light text-gray-500 sm:text-sm tooltip_element" >
                
                 <SkillTooltip message={
                   <section >
@@ -47,10 +47,8 @@ export default function SkillSection() {
                   {(SKILL_PROF_LEVELS.find(i => i.level == skill.proficiency)?.problem_solving || '')}<br/>
                   {(SKILL_PROF_LEVELS.find(i => i.level == skill.proficiency)?.awareness || '')}<br/>
                   </section>
-                  } position="bottom" />
+                  } position="bottom" label={skill.proficiency}/>
 
-                  {skill.proficiency}
-                
               </div>
             </div>
           </div>

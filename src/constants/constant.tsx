@@ -103,6 +103,12 @@ export const SKILL_ITEMS: SkillItemType[] = [
     skillUrl: "https://spring.io/",
   },
   {
+    name: "JUnit ",
+    proficiency: "Expert",
+    icon: "/portfolio/skillset/junit-skill.png",
+    skillUrl: "https://junit.org/",
+  },
+  {
     name: "MuleSoft",
     proficiency: "Advanced",
     icon: "/portfolio/skillset/mulesoft-skill.png",
@@ -113,6 +119,12 @@ export const SKILL_ITEMS: SkillItemType[] = [
     proficiency: "Advanced",
     icon: "/portfolio/skillset/hl7-skill.png",
     skillUrl: "https://www.hl7.org",
+  },
+  {
+    name: "PostgreSQL",
+    proficiency: "Advanced",
+    icon: "/portfolio/skillset/postgresql-skill.svg",
+    skillUrl: "https://www.postgresql.org/",
   },
   {
     name: "TypeScript",
@@ -138,6 +150,13 @@ export const SKILL_ITEMS: SkillItemType[] = [
     icon: "/portfolio/skillset/react-skill.png",
     skillUrl: "https://react.dev/",
   },
+  {
+    name: "Tailwind CSS",
+    proficiency: "Intermediate",
+    icon: "/portfolio/skillset/tailwindcss-skill.svg",
+    skillUrl: "https://tailwindcss.com/",
+  },
+  
 ];
 
 export const ABOUT_ME_DETAILS = {
