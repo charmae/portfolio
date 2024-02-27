@@ -3,10 +3,7 @@ import Image from "next/image";
 import MapboxMap from "./mapbox-map";
 import MessageForm from "./message-form";
 
-
-
 export default function ContactSection() {
-  
   return (
     <div
       id="contactSection"
@@ -14,7 +11,7 @@ export default function ContactSection() {
     >
       <div className=" relative w-full   flex flex-col-reverse sm:flex-row justify-center ">
         <div className=" relative  w-full  sm:w-1/3  grid  pb-5   ">
-          <div className="w-full sm:w-1/2 flex flex-row flex-no-wrap  px-4  sm:px-8 py-5 ">
+          <div className="w-full sm:w-1/2 flex flex-row flex-no-wrap  px-4  sm:px-8 py-3 ">
             <div className="sm:w-1/3 xl:w-1/4 px-1">
               <Image
                 src="/portfolio/contact/email-icon.png"
@@ -33,7 +30,7 @@ export default function ContactSection() {
               </div>
             </div>
           </div>
-          <div className="w-full sm:w-1/2 flex flex-row flex-no-wrap px-4 sm:px-8 py-5">
+          <div className="w-full sm:w-1/2 flex flex-row flex-no-wrap px-4 sm:px-8 py-3">
             <div className="sm:w-1/3 xl:w-1/4 px-1">
               <Image
                 src="/portfolio/contact/resume-icon.png"
@@ -50,13 +47,13 @@ export default function ContactSection() {
               <div className="font-light text-coral text-sm">Coming Soon</div>
             </div>
           </div>
-          <div className="w-full sm:w-1/2 flex flex-row flex-no-wrap  px-4 sm:px-8 py-5">
-            <div className="sm:w-1/3 xl:w-1/4 px-1">
+          <div className="w-full sm:w-1/2 flex flex-row flex-no-wrap  px-4 sm:px-8 py-3">
+            <div className="sm:w-1/3 xl:w-1/4 px-2">
               <Image
                 src="/portfolio/contact/linkedin-icon.png"
                 alt="LinkedIn"
-                width="40"
-                height="40"
+                width="42"
+                height="42"
                 className=" block sm:mx-auto"
               />
             </div>
@@ -71,7 +68,7 @@ export default function ContactSection() {
               </div>
             </div>
           </div>
-          <div className="w-full sm:w-1/2 flex flex-row flex-no-wrap px-4 sm:px-8 py-5">
+          <div className="w-full sm:w-1/2 flex flex-row flex-no-wrap px-4 sm:px-8 py-3">
             <div className="sm:w-1/3 xl:w-1/4 px-1">
               <Image
                 src="/portfolio/contact/location-icon.png"
@@ -91,19 +88,18 @@ export default function ContactSection() {
             </div>
           </div>
           <div
-            style={{ height: "23vh", width: "90%" }}
-            className="px-4 sm:px-8 mb-10"
-          >
+            style={{ height: "23vh", width: "100%" }}
+            className="px-5 sm:pr-0 sm:pl-10 mb-10  ">
             <MapboxMap />
           </div>
         </div>
 
         <div className=" relative place-items-start sm:w-1/2 w-full  items-start bg-red">
-          <div className=" w-full px-5 sm:mx-20 sm:max-w-[600px] sm:items-start sm:justify-start">
-            <h2 className="font-bold tracking-wider text-gunmetal text-3xl mt-10 sm:mt-0 ">
+          <div className=" w-full px-5 sm:mx-20 sm:w-3/4 sm:items-start sm:justify-start">
+            <h2 className="font-bold tracking-wider  text-gunmetal text-3xl mt-10 sm:mt-0 ">
               Drop Me a Message
             </h2>
-            <MessageForm/>
+            <MessageForm />
           </div>
         </div>
       </div>

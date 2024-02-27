@@ -44,7 +44,7 @@ export default function ProjectSection() {
                     </a>{" "}
                     |{" "}
                     <a
-                      href={project.url}
+                      href={project.url} target="_blank"
                       className=" text-gray hover:text-red-500"
                     >
                       Demo
@@ -84,7 +84,7 @@ export default function ProjectSection() {
           ))}
         </div>
         <p className="m-10 text-gray font-light text-xs text-center ">Get ready for an exciting influx of new projects coming soon!</p>
-        <div className="sm:flex sm:flex-row sm:w-full justify-center sm:pt-20 invisible sm:visible">
+        <div className="sm:flex sm:flex-row sm:w-full justify-center sm:pt-5 invisible sm:visible">
         <a
           className="px-10 py-2 my-10   hover:border-t-coral border-t-2  border-t-white  border-b-blue-navy border-b-2 text-lg hover:shadow "
           href="#contactSection" >
