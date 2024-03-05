@@ -36,7 +36,7 @@ export default function SkillSection() {
                   {skill.name}
                 </h3>
               </a>
-              <div className="relative font-light text-gray-500 sm:text-sm tooltip_element" >
+              {/* <div className="relative font-light text-gray-500 sm:text-sm tooltip_element" >
                
                 <SkillTooltip message={
                   <section >
@@ -49,7 +49,8 @@ export default function SkillSection() {
                   </section>
                   } position="bottom" label={skill.proficiency}/>
 
-              </div>
+              </div> */}
+              <div>{skill.proficiency}</div>
             </div>
           </div>
         ))}
