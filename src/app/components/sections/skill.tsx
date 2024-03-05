@@ -58,7 +58,7 @@ export default function SkillSection() {
       <CertificateSection />
       <div className="sm:flex sm:flex-row sm:w-full justify-center sm:pt-20 invisible sm:visible">
         <a
-          className="px-10 py-2 my-10 text-white bg-gray rounded-full shadow-md text-lg hover:bg-gray-800 hover:border-red"
+          className="px-10 py-2 sm:my-0 my-5 text-white bg-gray rounded-full shadow-md text-lg hover:bg-gray-800 hover:border-red"
           href="#projectSection" >
           Take a Tour of My Work
         </a>
