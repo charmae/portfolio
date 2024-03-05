@@ -162,7 +162,7 @@ export const SKILL_ITEMS: SkillItemType[] = [
 export const ABOUT_ME_DETAILS = {
   bio: "Greetings! I'm Charmae, a Software Engineering Specialist with over ten years in the IT industry. I specialize in Java Enterprise Backend & Integration, along with Front-End Development, leveraging my proficiency in Java EE, Spring Framework, Spring Boot, Angular, JUnit, MuleSoft, MUnit, SonarQube, and GIT.  I have a rich background working across diverse domains, including telecom, education, life sciences, healthcare, and public service.",
   avatarIcon: "/portfolio/photo3.png",
-  nameIcon: "/portfolio/charmae-name2.png",
+  nameIcon: "/portfolio/charmae-name2.jpeg",
 };
 
 export const socialMediaList = [
