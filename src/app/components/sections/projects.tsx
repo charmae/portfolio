@@ -13,7 +13,7 @@ export default function ProjectSection() {
     <>
       <div
         id="projectSection"
-        className="relative w-full sm:min-h-screen  flex flex-col justify-center items-center py-10   "
+        className="relative w-full sm:min-h-screen  flex flex-col justify-center items-center py-10  bg-white "
       >
         <div className="relative self-center text-center w-full sm:w-2/3 xl:w-1/2  sm:px-0 sm:pt-0">
           <h2 className="font-bold tracking-wider text-gunmetal text-3xl mb-4">

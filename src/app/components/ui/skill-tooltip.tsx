@@ -14,11 +14,10 @@ export function SkillTooltip({ label, message, position }: ITooltipProps) {
 
   return (
     <div
-      className="inline-block z-10"
+      className="inline-block "
       onClick={() => setShowTooltip(!showTooltip)}
       onMouseEnter={() => setShowTooltip(true)}
-      onMouseLeave={() => setShowTooltip(false)}
-    >
+      onMouseLeave={() => setShowTooltip(false)} >
       {label}
       {showTooltip && (
         <span className={`tooltip tooltip-${position}`}>{message}</span>

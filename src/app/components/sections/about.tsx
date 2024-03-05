@@ -10,7 +10,7 @@ import Parser from "html-react-parser";
 export default function About() {
   return (
     <section>
-    <div className="w-full sm:min-h-screen flex flex-col justify-center  bg-white">
+    <div className="w-full sm:min-h-screen flex flex-col justify-center dark:bg-white dark:text-gunmetal" >
       <div className="relative flex place-items-center  justify-between self-center items-center  flex-col sm:flex-row w-full md:w-5/6 xl:w-2/3 px-4  sm:px-0 h-full">
         <div className="w-2/5 text-center sm:text-left pt-20 sm:pt-0 sm:py-4  sm:px-8 md:px-10">
           <Image
@@ -33,7 +33,7 @@ export default function About() {
               className="w-1/2 block   "
             />
           </div>
-          <div className="place-items-center pt-2 text-center sm:text-left">
+          <div className="place-items-center pt-2 text-center sm:text-left dark:text-black">
             {" "}
             {aboutMe.bio}
           </div>
