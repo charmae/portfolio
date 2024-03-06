@@ -7,7 +7,7 @@ export default function ContactSection() {
   return (
     <div
       id="contactSection"
-      className="relative w-full sm:min-h-screen  flex flex-col justify-center items-center  bg-lightGray  dark:text-white dark:bg-gunmetal "
+      className="relative w-full sm:min-h-screen  flex flex-col justify-center items-center  bg-lightGray  dark:text-white dark:bg-gunmetal sm:pt-20"
     >
       <div className=" relative w-full   flex flex-col-reverse sm:flex-row justify-center ">
         <div className=" relative  w-full  sm:w-1/3  grid  pb-5   ">
@@ -90,17 +90,17 @@ export default function ContactSection() {
           </div>
           <div
             style={{ height: "23vh", width: "100%" }}
-            className="px-5 sm:pr-0 sm:pl-10 mb-10  ">
+            className="px-5 sm:pr-0 sm:pl-10 mb-10 row-span-2   ">
             <MapboxMap />
           </div>
         </div>
 
         <div className=" relative place-items-start sm:w-1/2 w-full  items-start bg-red">
           <div className=" w-full px-5 sm:mx-20 sm:w-3/4 sm:items-start sm:justify-start">
-            <h2 className="font-bold tracking-wider  text-gunmetal text-3xl mt-10 sm:mt-0 dark:text-white">
+            <h2 className="font-bold tracking-wider  text-gunmetal text-3xl mt-10 sm:mt-0 dark:text-white ">
               Drop Me a Message
             </h2>
-            <p className="text-gray text-xs mt-1 dark:text-coral">Drop me a message anytime; <p className="underline inline">my inbox is always open!</p></p>
+            <p className="text-gray text-xs mt-1 dark:text-coral pb-5">Drop me a message anytime; <p className="underline inline">my inbox is always open!</p></p>
             <MessageForm />
           </div>
         </div>

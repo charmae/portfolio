@@ -33,8 +33,10 @@ export default function MessageForm() {
 
     if (
       typeof recaptchaValue != "undefined" &&
-      recaptchaValue && emailValue &&
-      nameValue && msgValue
+      recaptchaValue &&
+      emailValue &&
+      nameValue &&
+      msgValue
     ) {
       setState(false);
     }
@@ -62,37 +64,38 @@ export default function MessageForm() {
     }
   };
 
-
-
   return (
     <section>
-      <div
-        id="alert"
-        className="flex items-center w-full bg-gray p-2  my-3 space-x-4 rtl:space-x-reverse text-gray-500 bg-cyan-500 divide-x rtl:divide-x-reverse divide-coral 
-              shadow   space-x  dark:bg-emerald-400 dark:divide-white dark:text-coral"
-        role="alert"
-         style={{ visibility: showAlert ? "visible" : "hidden" }}
+      <div 
+      style={{ display: showAlert ? "block" : "none" }}
       >
-        <svg
-          className="w-5 h-5 ml-2 mb-1  text-white dark:text-gray rotate-45 dark:text-blue-navy"
-          aria-hidden="true"
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 18 20"
+        <div
+          id="alert"
+          className="flex block items-center w-full bg-gray p-2  space-x-4 rtl:space-x-reverse text-gray-500 bg-cyan-500 divide-x rtl:divide-x-reverse divide-coral 
+              shadow   space-x  dark:bg-emerald-400 dark:divide-white dark:text-coral"
+          role="alert"
         >
-          <path
-            stroke="currentColor"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            d="m9 17 8 2L9 1 1 19l8-2Zm0 0V9"
-          />
-        </svg>
-        <div className="ps-4 text-sm font-normal text-white dark:text-gunmetal">
-          Message sent successfully.
+          <svg
+            className="w-5 h-5 ml-2 mb-1  text-white dark:text-gray rotate-45 dark:text-blue-navy"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 18 20"
+          >
+            <path
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="m9 17 8 2L9 1 1 19l8-2Zm0 0V9"
+            />
+          </svg>
+          <div className="ps-4 text-sm font-normal text-white dark:text-gunmetal">
+            Message sent successfully.
+          </div>
         </div>
       </div>
-      <form className="for" onSubmit={handleSubmit}>
+      <form className="for " onSubmit={handleSubmit}>
         <div className="mb-3">
           <input
             ref={nameRef}
@@ -143,7 +146,7 @@ export default function MessageForm() {
             />
           </div>
           <button
-            className="hover:shadow-form rounded-full mb-5 bg-gunmetal py-3 pt-3 px-8 text-base font-semibold text-white outline-none disabled:opacity-25 dark:bg-coral"
+            className="hover:shadow-form rounded-full mb-5 bg-gunmetal py-3 pt-3 px-8 text-base font-semibold text-white outline-none disabled:opacity-25 dark:bg-coral items-center "
             type="submit"
             disabled={state}
           >

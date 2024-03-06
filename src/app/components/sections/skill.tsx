@@ -18,7 +18,7 @@ export default function SkillSection() {
         </h2>
       </div>
 
-      <div className=" relative place-items-center w-full sm:w-3/4 grid py-5  items-center sm:grid-cols-3 sm:gap-3 grid-cols-2 gap-0">
+      <div className=" relative place-items-center w-full sm:w-3/4 grid py-5  items-center sm:grid-cols-5 sm:gap-3 grid-cols-2 gap-0">
         {skills.map((skill: SkillItemType) => (
           <div className="w-full flex   p-2 sm:p-1 dark:text-white " key={skill.name}>
             <div className="w-1/3 px-2 sm:px-0">
