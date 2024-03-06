@@ -13,7 +13,7 @@ export default function ProjectSection() {
     <>
       <div
         id="projectSection"
-        className="relative w-full sm:min-h-screen  flex flex-col justify-center items-center py-10  bg-white "
+        className="relative w-full sm:min-h-screen  flex flex-col justify-center items-center py-10  bg-white dark:text-gunmetal "
       >
         <div className="relative self-center text-center w-full sm:w-2/3 xl:w-1/2  sm:px-0 sm:pt-0">
           <h2 className="font-bold tracking-wider text-gunmetal text-3xl mb-4">
@@ -21,7 +21,7 @@ export default function ProjectSection() {
           </h2>
         </div>
 
-        <div className=" relative place-items-center w-full sm:w-3/4 py-5  items-center ">
+        <div className=" relative place-items-center w-full sm:w-3/4 py-5  items-center dark:text-gunmetal ">
           {projects.map((project: ProjectType) => (
             <div
               className="w-full flex flex-col-reverse sm:flex-row  p-2 sm:p-1 "
