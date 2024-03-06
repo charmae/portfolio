@@ -71,7 +71,7 @@ export default function MessageForm() {
         className="flex items-center w-full bg-gray p-2  my-3 space-x-4 rtl:space-x-reverse text-gray-500 bg-cyan-500 divide-x rtl:divide-x-reverse divide-coral 
               shadow   space-x  dark:bg-emerald-400 dark:divide-white dark:text-coral"
         role="alert"
-        // style={{ visibility: showAlert ? "visible" : "hidden" }}
+         style={{ visibility: showAlert ? "visible" : "hidden" }}
       >
         <svg
           className="w-5 h-5 ml-2 mb-1  text-white dark:text-gray rotate-45 dark:text-blue-navy"
