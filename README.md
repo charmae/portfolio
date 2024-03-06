@@ -1,8 +1,7 @@
 # Portfolio
 
-![Portfolio Preview](https://gcharmae.com/portfolio/portfolio-screenshot.png)
+![Portfolio Preview](https://gcharmae.com/portfolio/portfolio-screenshot.png)    
 
-## Description
 
 A simple and clean portfolio built with React.js and Next.js. Showcase your skills, projects, and experience in a responsive and user-friendly interface.
 
@@ -45,7 +44,11 @@ Visit [http://localhost:3000](http://localhost:3000) to view your portfolio.
 
 - [React.js](https://reactjs.org/)
 - [Next.js](https://nextjs.org/)
-
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Re-Captcha](https://www.google.com/recaptcha)
+- [Mapbox](https://www.mapbox.com/)
+- [EmailJS](https://www.emailjs.com/)    
+  
 ## Contact
 
 - Charmae
