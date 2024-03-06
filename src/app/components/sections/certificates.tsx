@@ -6,17 +6,17 @@ import { CertType, CERT_LIST as certList } from "@/constants/constant";
 export default function CertificateSection() {
   return (
     <section>
-    <div  className="relative flex flex-col justify-center items-center dark:text-gunmetal ">
+    <div  className="relative flex flex-col justify-center items-center dark:text-white dark:bg-gunmetal ">
       <div className="relative text-center w-full px-1 pt-5 sm:px-0">
-        <h2 className="relative w-full font-bold  text-gray-800 text-2xl mb-4  ">
+        <h2 className="relative w-full font-bold  text-gray-800 text-2xl mb-4  dark:text-white ">
           Certifications
         </h2>
       </div>
 
-      <div className=" relative place-items-center w-full sm:w-3/4 grid items-center sm:grid-cols-5 sm:gap-5 grid-cols-2 g sm:gap-5">
+      <div className=" relative place-items-center w-full sm:w-3/4 grid items-center sm:grid-cols-5  grid-cols-2 g sm:gap-5 dark:text-white">
         {certList.map((cert: CertType) => (
           <div
-            className="relative w-full sm:w-full flex-row hover:shadow-lg p-5 place-items-center "
+            className="relative w-full sm:w-full flex-row hover:shadow-lg p-5 place-items-center  "
             key={cert.name}
           >
             <a href={cert.href} target="_blank">
@@ -32,7 +32,7 @@ export default function CertificateSection() {
               </div>
 
               <div className="relative w-full place-items-center pt-2 ">
-                <p className="font-light text-gunmetal text-xs text-center">
+                <p className="font-light text-gunmetal text-xs text-center dark:text-white">
                   {cert.name}
                 </p>
               </div>

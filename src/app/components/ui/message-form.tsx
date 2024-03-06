@@ -69,12 +69,12 @@ export default function MessageForm() {
       <div
         id="alert"
         className="flex items-center w-full bg-gray p-2  my-3 space-x-4 rtl:space-x-reverse text-gray-500 bg-cyan-500 divide-x rtl:divide-x-reverse divide-coral 
-              shadow dark:text-gray-400 dark:divide-gray-700 space-x dark:bg-gray-800"
+              shadow   space-x  dark:bg-emerald-400 dark:divide-white dark:text-coral"
         role="alert"
-        style={{ visibility: showAlert ? "visible" : "hidden" }}
+        // style={{ visibility: showAlert ? "visible" : "hidden" }}
       >
         <svg
-          className="w-5 h-5 ml-2 mb-1  text-white dark:text-gray rotate-45"
+          className="w-5 h-5 ml-2 mb-1  text-white dark:text-gray rotate-45 dark:text-blue-navy"
           aria-hidden="true"
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -88,7 +88,7 @@ export default function MessageForm() {
             d="m9 17 8 2L9 1 1 19l8-2Zm0 0V9"
           />
         </svg>
-        <div className="ps-4 text-sm font-normal text-white">
+        <div className="ps-4 text-sm font-normal text-white dark:text-gunmetal">
           Message sent successfully.
         </div>
       </div>
@@ -130,7 +130,7 @@ export default function MessageForm() {
                   border-[#e0e0e0] bg-white py-1 px-2 text-base font-medium text-gunmetal
                   outline-none focus:border-coral focus:shadow-md "
           ></textarea>
-          <p className="msg-remaining-text text-gray text-xs">
+          <p className="msg-remaining-text text-gray text-xs dark:text-white">
             Remaining characters: {MAX_LENGTH - textAreaValue.length}
           </p>
         </div>
@@ -143,7 +143,7 @@ export default function MessageForm() {
             />
           </div>
           <button
-            className="hover:shadow-form rounded-full mb-5 bg-gunmetal py-3 pt-3 px-8 text-base font-semibold text-white outline-none disabled:opacity-25"
+            className="hover:shadow-form rounded-full mb-5 bg-gunmetal py-3 pt-3 px-8 text-base font-semibold text-white outline-none disabled:opacity-25 dark:bg-coral"
             type="submit"
             disabled={state}
           >

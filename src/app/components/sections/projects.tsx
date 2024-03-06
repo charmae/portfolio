@@ -13,7 +13,7 @@ export default function ProjectSection() {
     <>
       <div
         id="projectSection"
-        className="relative w-full sm:min-h-screen  flex flex-col justify-center items-center py-10  bg-white dark:text-gunmetal "
+        className="relative w-full sm:min-h-screen  flex flex-col justify-center items-center py-10  bg-white dark:bg-gunmetal dark:text-coral "
       >
         <div className="relative self-center text-center w-full sm:w-2/3 xl:w-1/2  sm:px-0 sm:pt-0">
           <h2 className="font-bold tracking-wider text-gunmetal text-3xl mb-4">
@@ -21,7 +21,7 @@ export default function ProjectSection() {
           </h2>
         </div>
 
-        <div className=" relative place-items-center w-full sm:w-3/4 py-5  items-center dark:text-gunmetal ">
+        <div className=" relative place-items-center w-full sm:w-3/4 py-5  items-center dark:text-white ">
           {projects.map((project: ProjectType) => (
             <div
               className="w-full flex flex-col-reverse sm:flex-row  p-2 sm:p-1 "
@@ -34,18 +34,18 @@ export default function ProjectSection() {
                 <div className="relative font-light text-gray-500 sm:text-sm mt-2 ">
                   <p>{project.description}</p>
                 </div>
-                <div className="relative font-light text-gray-500 sm:text-sm mt-2 ">
+                <div className="relative font-light text-gray-500 sm:text-sm mt-2  ">
                   <p>
                     <a
                       href={project.repoUrl}
-                      className=" text-gray hover:text-red-500"
+                      className=" text-gray hover:text-red-500 dark:text-cyan-600"
                     >
                       Code Repository
                     </a>{" "}
                     |{" "}
                     <a
                       href={project.url} target="_blank"
-                      className=" text-gray hover:text-red-500"
+                      className=" text-gray hover:text-red-500 dark:text-cyan-600"
                     >
                       Demo
                     </a>
@@ -83,7 +83,7 @@ export default function ProjectSection() {
             </div>
           ))}
         </div>
-        <p className="m-10 text-gray font-light text-xs text-center ">Get ready for an exciting influx of new projects coming soon!</p>
+        <p className="m-10 text-gray font-light text-xs text-center dark:text-white ">Get ready for an exciting influx of new projects coming soon!</p>
         <div className="sm:flex sm:flex-row sm:w-full justify-center sm:pt-5 invisible sm:visible">
         <a
           className="px-10 py-2 my-10   hover:border-t-coral border-t-2  border-t-white  border-b-blue-navy border-b-2 text-lg hover:shadow "
