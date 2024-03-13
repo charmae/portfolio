@@ -66,7 +66,7 @@ export default function MessageForm() {
 
   return (
     <section>
-      <div 
+      <div   id="contactForm"
       style={{ display: showAlert ? "block" : "none" }}
       >
         <div

@@ -11,23 +11,28 @@ import Parser from "html-react-parser";
 export default function About() {
   return (
     <section>
-      <div className="w-full sm:min-h-screen flex flex-col justify-center dark:bg-gunmetal dark:text-white">
-        <div className="relative flex place-items-center  justify-between self-center items-center  flex-col sm:flex-row w-full md:w-5/6 xl:w-2/3 px-4  sm:px-0 h-full">
-          <div className="w-2/5 text-center sm:text-left pt-20 sm:pt-0 sm:py-4  sm:px-8 md:px-10">
+      <div className="w-full min-h-screen flex flex-col justify-center dark:bg-gunmetal dark:text-white ">
+        <div className="relative flex flex-col sm:flex-row   
+        place-items-center  justify-between self-center items-center  
+        w-full  sm:w-3/4  md:w-3/4 lg:w-5/6 xl:w-5/6 2xl:w-3/6  
+        px-4 sm:px-0 md:px-0 h-full">
+          <div className="w-2/5 text-center  pt-10 py-8 sm:pt-0 md:pt-0   sm:px-8 ">
             <Image
               src={aboutMe.avatarIcon}
               alt="photo Logo"
               width={0}
               height={0}
               priority
-              className="w-3/4 mx-auto rounded-full"
+              className="w-full sm:w-full md:w-full lg:w-full xl:w-full  mx-auto rounded-full"
             />
           </div>
-          <div className=" p-2 sm:w-3/5  w-full">
+          <div className=" p-2 w-full">
             <div className="w-full flex flex-row justify-center items-center sm:items-start sm:justify-start  ">
               {Parser(aboutMe.nameSvg)}
             </div>
-            <div className="place-items-center pt-2 text-center sm:text-left dark:text-black">
+            <div className="place-items-center text-center  w-full
+            2xl:text-lg sm:text-left 
+            dark:text-black px-2">
               {aboutMe.bio}
             </div>
             <div className="text-center  ">
@@ -46,12 +51,17 @@ export default function About() {
                 ))}
               </ul>
             </div>
-            <hr className="w-full my-12 h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-red-500 to-transparent opacity-50 dark:opacity-100" />
+            <hr className="w-full my-12 md:my-5 h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-red-500 to-transparent opacity-50 dark:opacity-100" />
           </div>
         </div>
-        <div className="sm:flex sm:flex-row sm:w-full justify-center sm:pt-20 invisible sm:visible">
+        <div className="sm:flex sm:flex-row sm:w-full justify-center 
+        sm:pt-20 md:pt-20 2xl:pt-40 lg:pt-20 invisible sm:visible">
           <a
-            className="px-10 py-2 my-10   hover:border-t-coral border-t-2  border-t-white  border-b-blue-navy border-b-2 text-lg hover:shadow "
+            className="relative 
+            px-5 py-2 
+            hover:border-t-coral hover:border-b-coral hover:shadow  
+            border-t-2  border-t-white  border-b-blue-navy border-b-2 
+            text-lg  "
             href="#skillset"
           >
             Learn More about My Skill Set

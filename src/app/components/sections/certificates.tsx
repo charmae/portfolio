@@ -7,8 +7,8 @@ export default function CertificateSection() {
   return (
     <section>
     <div  className="relative flex flex-col justify-center items-center dark:text-white dark:bg-gunmetal ">
-      <div className="relative text-center w-full px-1 pt-5 sm:px-0">
-        <h2 className="relative w-full font-bold  text-gray-800 text-2xl mb-4  dark:text-white ">
+      <div className="relative text-center w-full px-1 sm:pt-0 sm:px-0">
+        <h2 className="relative w-full font-bold  text-gray-800 text-2xl my-4 sm:my-2  dark:text-white ">
           Certifications
         </h2>
       </div>
@@ -26,7 +26,7 @@ export default function CertificateSection() {
                   alt={cert.name}
                   width={0}
                   height={0}
-                  className="w-1/2 h-auto block mx-auto"
+                  className="w-1/2 sm:w-1/2 lg:w-3/4 h-auto block mx-auto"
                   priority
                 />
               </div>
