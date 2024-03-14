@@ -14,10 +14,10 @@ export default function ContactSection() {
   return (
     <div
       id="contactSection"
-      className="relative w-full min-h-screen  flex flex-col justify-center items-center  bg-lightGray  dark:text-white dark:bg-gunmetal sm:pt-20"
+      className="relative w-full min-h-screen  flex flex-col justify-center items-center  bg-lightGray  dark:text-white dark:bg-gunmetal sm:pt-10 md:pt-5 lg:pt-0"
     >
-      <div className=" relative w-full   flex flex-col-reverse sm:flex-row justify-center ">
-        <div className=" relative  w-full  sm:w-1/3  grid  sm:py-14  px-5 ">
+      <div className=" relative w-full   flex flex-col-reverse sm:flex-col-reverse md:flex-col-reverse lg:flex-row  justify-center ">
+        <div className=" relative  w-full  sm:w-full md:w-full lg:w-2/6 grid   px-3  ">
           <div className="w-full flex flex-row flex-no-wrap py-3 ">
             <div className=" px-1 ">
               <Image
@@ -107,14 +107,14 @@ export default function ContactSection() {
           </div>
           <div
             style={{ height: "23vh", width: "100%" }}
-            className="px-4 sm:pr-0  mb-10 row-span-2   "
+            className=" w-full sm:pr-0  mb-5    "
           >
             <MapboxMap />
           </div>
         </div>
 
-        <div className=" relative place-items-start sm:w-1/2 w-full  items-start bg-red">
-          <div className=" w-full px-5 sm:mx-20 sm:w-3/4 sm:items-start sm:justify-start">
+        <div className=" relative place-items-start sm:w-full md:w-full lg:w-3/6 w-full  items-start bg-red">
+          <div className=" w-full px-10 sm:w-full md:w-full sm:items-start sm:justify-start">
             <h2 className="font-bold tracking-wider  text-gunmetal text-3xl mt-10 sm:mt-0 dark:text-white ">
               Drop Me a Message
             </h2>

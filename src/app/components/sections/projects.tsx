@@ -15,19 +15,19 @@ export default function ProjectSection() {
         id="projectSection"
         className="relative w-full sm:min-h-screen  flex flex-col justify-center items-center py-10  bg-white dark:bg-gunmetal dark:text-coral "
       >
-        <div className="relative self-center text-center w-full sm:w-2/3 xl:w-1/2  ">
+        <div className="relative self-center text-center w-full sm:w-full md:w-full lg:w-2/3 xl:w-1/2  ">
           <h2 className="font-bold tracking-wider text-gunmetal text-3xl ">
             Projects
           </h2>
         </div>
 
-        <div className=" relative place-items-center w-full sm:w-3/4 py-5 items-center dark:text-white ">
+        <div className=" relative place-items-center w-full sm:w-full md:w-full lg:w-3/4 py-5 items-center dark:text-white ">
           {projects.map((project: ProjectType) => (
             <div
               className="w-full flex flex-col-reverse sm:flex-row  p-2 sm:p-1 "
               key={project.id}
             >
-              <div className="relative sm:w-1/2 sm:m-10 m-5 w-full   ">
+              <div className="relative sm:w-full md:w-full lg:w-1/2 sm:m-10 m-5 w-full   ">
                 <h3 className="tracking-wide  font-bold sm:text-xl text-lg   mb-0">
                   {project.name}
                 </h3>
@@ -68,7 +68,7 @@ export default function ProjectSection() {
 
                 <hr className="w-full my-12 h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-red-500 to-transparent opacity-50 dark:opacity-100" />
               </div>
-              <div className="relative sm:w-1/2 w-full  ">
+              <div className="relative sm:w-full md:w-full lg:w-1/2 w-full  ">
                 {project.images.map((projectImg: ImageType) => (
                   <Image
                     key={projectImg.id as string}

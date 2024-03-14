@@ -154,7 +154,7 @@ export default function MessageForm( props: any) {
           >
             Send
           </button>
-          <hr className="w-full my-12 h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-red-500 to-transparent opacity-50 dark:opacity-100" />
+          <hr className="w-full my-5 h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-red-500 to-transparent opacity-50 dark:opacity-100" />
         </div>
       </form>
       </div>
