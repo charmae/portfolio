@@ -86,7 +86,10 @@ export default function ProjectSection() {
         <p className=" text-gray font-light text-xs text-center dark:text-white ">Get ready for an exciting influx of new projects coming soon!</p>
         <div className="sm:flex sm:flex-row sm:w-full justify-center  invisible sm:visible">
         <a
-          className="px-10 py-2 my-10   hover:border-t-coral border-t-2  border-t-white  border-b-blue-navy border-b-2 text-lg hover:shadow "
+          className="px-10 py-2 my-10  relative 
+          hover:border-t-coral hover:border-b-coral hover:shadow  
+          border-t-2  border-t-blue-navy  border-b-blue-navy border-b-2 
+          text-lg  dark:border-white "
           href="#contactSection" >
           Contact Me Here
         </a>

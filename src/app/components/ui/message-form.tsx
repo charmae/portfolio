@@ -10,9 +10,9 @@ const EMAILJS_TEMPLATEID = process.env.EMAILJS_TEMPLATEID as string;
 const NEXT_PUBLIC_EMAILJS_RECAPTCHA = process.env
   .NEXT_PUBLIC_EMAILJS_RECAPTCHA as string;
 
-export default function MessageForm() {
+export default function MessageForm( props: any) {
   const emailRef = useRef<HTMLInputElement>(null!);
-  const nameRef = useRef<HTMLInputElement>(null!);
+  const nameRef = props.reference;
   const msgRef = useRef<HTMLTextAreaElement>(null!);
   const refCaptcha = useRef<ReCAPTCHA>(null!);
 
@@ -22,6 +22,7 @@ export default function MessageForm() {
 
   const [state, setState] = useState(true);
   const [showAlert, setShowAlert] = useState(false);
+
 
   useEffect(() => emailjs.init({ publicKey: EMAILJS_KEY }));
 
@@ -64,15 +65,16 @@ export default function MessageForm() {
     }
   };
 
+
   return (
-    <section>
+    <div>
       <div   id="contactForm"
       style={{ display: showAlert ? "block" : "none" }}
       >
         <div
           id="alert"
           className="flex block items-center w-full bg-gray p-2  space-x-4 rtl:space-x-reverse text-gray-500 bg-cyan-500 divide-x rtl:divide-x-reverse divide-coral 
-              shadow   space-x  dark:bg-emerald-400 dark:divide-white dark:text-coral"
+              shadow   space-x  dark:bg-emerald-400 dark:divide-white dark:text-coral mb-3"
           role="alert"
         >
           <svg
@@ -146,7 +148,7 @@ export default function MessageForm() {
             />
           </div>
           <button
-            className="hover:shadow-form rounded-full mb-5 bg-gunmetal py-3 pt-3 px-8 text-base font-semibold text-white outline-none disabled:opacity-25 dark:bg-coral items-center "
+            className="hover:shadow-form mb-5 bg-gunmetal py-3 pt-3 px-8 text-base font-semibold text-white outline-none disabled:opacity-25 dark:bg-coral items-center "
             type="submit"
             disabled={state}
           >
@@ -155,6 +157,6 @@ export default function MessageForm() {
           <hr className="w-full my-12 h-px border-t-0 bg-transparent bg-gradient-to-r from-transparent via-red-500 to-transparent opacity-50 dark:opacity-100" />
         </div>
       </form>
-    </section>
+      </div>
   );
 }

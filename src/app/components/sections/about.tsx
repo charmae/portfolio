@@ -60,8 +60,8 @@ export default function About() {
             className="relative 
             px-5 py-2 
             hover:border-t-coral hover:border-b-coral hover:shadow  
-            border-t-2  border-t-white  border-b-blue-navy border-b-2 
-            text-lg  "
+            border-t-2  border-t-blue-navy  border-b-blue-navy border-b-2 
+            text-lg  dark:border-white "
             href="#skillset"
           >
             Learn More about My Skill Set
